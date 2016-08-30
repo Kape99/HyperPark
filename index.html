@@ -16,6 +16,7 @@
    <!-- Custom CSS -->
    <link href="css/park.css" rel="stylesheet">
 
+   <link rel="stylesheet" href="/css/hover.css" media="screen" title="no title" charset="utf-8">
    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
    <!--[if lt IE 9]>
@@ -27,10 +28,12 @@
 
 <body>
 
+
+
+<!--
 <header>
    <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #e3f2fd;">
       <div class="container-fluid">
-         <!-- Brand and toggle get grouped for better mobile display -->
          <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                <span class="sr-only">Toggle navigation</span>
@@ -41,7 +44,7 @@
             <a class="navbar-brand" href="#">Brand</a>
          </div>
 
-         <!-- Collect the nav links, forms, and other content for toggling -->
+
          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
@@ -74,35 +77,120 @@
                </li>
             </ul>
          </div>
-         <!-- /.navbar-collapse -->
+
       </div>
-      <!-- /.container-fluid -->
    </nav>
 
-  
-</header>  
-   <!-- REAL BODY AFTER NAVBARSSSSSASDASDASDASDASDASDASD -->
+
+</header>
+   REAL BODY AFTER NAVBARSSSSSASDASDASDASDASDASDASD -->
 
 
 
-
+<!--
 
    <div class="container">
       <div class="row">
          <div class="col-md-7">
-            scritte 
+            scritte
          </div>
          <div class="col-md-5">
-           immagine lupo 
+           immagine lupo
 
          </div>
 
       </div>
    </div>
    <div class="jumbotron jumbotron-fluid">
+-->
 
-      <div class="container">
-         <div class="row">
+
+<!-- Testata -->
+<div class="container" style="height: 1000px; position: relative">
+
+<!-- 300 px da sistemare ....se rimpicciolisci troppo la scheda la distanza tra gli elementi e il menu non cambia-->
+<div id="header" style="height: 400px;">
+
+
+
+
+    <!-- Mountains picture -->
+    <img src="content/monti.jpg" style="position: absolute;top: 70px ; left: 5%;  width: 90%; eight: auto" />
+
+    <!-- NavigationBar -->
+    <div class="" style="position: absolute;top: 29px; left: 25% ">
+        <ul class="nav nav-tabs">
+
+            <!--About Us -->
+            <li role="presentation"><a href="#">About Us</a></li>
+
+            <!-- Come Raggiungerci -->
+            <li role="presentation" class="dropdown">
+                <a href="#">
+                Come Raggiungerci
+              </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </li>
+
+            <!-- Esplora il Nostro Territorio -->
+            <li role="presentation" class="dropdown">
+                <a href="#">
+                  Esplora il Nostro Territorio
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </li>
+
+            <!-- Percorsi -->
+            <li role="presentation" class="dropdown">
+                <a href="#">
+                  Percorsi
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </li>
+
+            <!-- Dove Alloggiare -->
+            <li role="presentation" class="dropdown">
+                <a href="#">
+                  Dove Alloggiare
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Logo -->
+    <img src="content/logo_majella.jpg" style="position: absolute; top: 30px; left: 10%; width:10%" />
+
+</div>
+
+
+
+
+         <div  class="row"  >
             <div class="col-md-4">
                <img src="img/home_fiori.jpg" class="img-responsive" alt="Responsive image">
                <h2>Heading 1</h2>
@@ -127,9 +215,8 @@
 
 
          </div>
-      </div>
-   </div>
 
+</div>
 
 
 
