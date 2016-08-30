@@ -1,0 +1,24 @@
+
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+}
+
+
+.row-padded {
+  padding: 35px;
+  background-color: #F7F7F7;
+  border: 1px solid #DDD;
+}
+
+.row-padded .span4 {
+  background-color: #bbb;
+  width: 30%;
+}
+
+.grigio {
+    opacity: 0.8;
+  background-color: #ddd;
+margin: 3px;
+  padding: 3px ;
+}
