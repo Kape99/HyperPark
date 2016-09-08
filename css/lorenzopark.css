@@ -1,0 +1,64 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,700,700italic);
+
+body { font-family: 'Open Sans', sans-serif; font-size: 15px; font-weight: 300; color: #555; margin: 0; padding: 0; }
+
+#page {max-width: 1200px; margin: 0 auto; position: relative; }
+
+header{ height: 350px; background:url(../img/aaa.jpg) no-repeat center bottom; position: relative; }
+header a.logo { z-index: 1;
+                position: absolute;
+                display: block; width: 160px; height: 66px;
+                background: url(../images/logo_majella_pag.jpg) no-repeat 0 0; background-size: contain;
+                top:15px; left:20px;
+}
+nav {
+    background-color: rgba(8,8,125,0.9);
+    position: relative;
+    top: 60px;
+    }
+    
+nav::after { content: ''; display: block; clear: both;}
+nav a.mobile_menu {
+    width: 32px; height: 32px;
+    background: url(../img/logo_majella_pag.jpg) no-repeat 0 0;
+    background-size: contain;
+    position: absolute; top: 22px; left: 50%; margin-left: -16px;
+    display: none;
+    }
+    
+nav ul{ list-style: none; margin: 0; padding: 0px; }
+
+nav ul li:hover { background-color: #A4CFFF; }
+nav ul li:hover > ul { display: block; }
+
+nav ul li a {
+    display: inline-block;
+    color: #fff;
+    padding: 15px 20px;
+    text-decoration: none;
+    position: relative;
+    }
+
+nav ul li a:visited { color: #fff; }
+nav ul li a:hover { background-color: #A4CFFF; }
+
+nav ul ul { position: absolute; top: 100%; background-color: #A4CFFF; display: none; }
+
+
+
+
+/* top-level */
+
+nav >ul { padding-left: 200px; }
+
+nav > ul > li { float: left; }
+
+nav > ul > li > a { width: auto; padding: 10px 20px 15px 20px;}
+
+/* footer */
+
+footer{ font-size: .9em; color: #999; margin-top: 35px }
+footer .content{ display: inline; background-color: #292929; position: relative; width: 100%}
+footer a { margin-left: 30px; color: #777; float: right;}
+footer a:visited { color: #777;}
+footer a:hover { color: #000;}
