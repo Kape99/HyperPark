@@ -1,14 +1,22 @@
-
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,700,700italic);
 
 body {
-   padding-top: 20px; /*Required padding for .navbar-fixed-top. Change if height of navigation changes. */
-}
-.navbar {
-    margin-bottom: 0px;
+   font-family: 'Open Sans', sans-serif; font-size: 14px; font-weight: 300; color: #555; margin: 0; padding: 0;padding-top: 20px; /*Required padding for .navbar-fixed-top. Change if height of navigation changes. */
 }
 
-.back-image{
-    background-image: url('content/monti.jpg');
+.navbar {
+    margin-bottom: 0px;
+    background-color: rgb(4,34,71);
+}
+
+#wolf {
+   padding:50px 0 50px 0;
+}
+.bianco { color: #FFF; }
+
+.arancione{
+    background-color: #e69138;
+    color: #FFF;
 }
 
 
@@ -32,7 +40,12 @@ body {
 
 .grigio {
     opacity: 0.8;
-  background-color: #ddd;
-margin: 3px;
-  padding: 3px ;
+    background-color: #555;
+   margin: 3px;   
+   padding: 3px ;
+}
+
+.grigio p {
+   color: #FFF;
+   margin-top: 5px;
 }

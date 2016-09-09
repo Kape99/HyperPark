@@ -27,10 +27,9 @@
 
 
 <body>
-
    <div class="container">
       <header style="background: url('content/monti.jpg');background-repeat: no-repeat ; background-size:100% 100%">
-         <nav class="navbar navbar-default " style="background-color: #e3f2fd;">
+         <nav class="navbar navbar-default">
             <div class="container-fluid">
                <div class="navbar-header">
                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -39,49 +38,41 @@
                      <span class="icon-bar"></span>
                      <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="#">Il parco</a>
+                  <a class="navbar-brand" href="#">
+                     <div class="bianco">Il parco</div></a>
                </div>
 
 
                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
-                     <li role="presentation"><a href="#">About Us</a></li>
+                     <li role="presentation" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Chi Siamo<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                           <li><a href="#">Introduziona al Parco</a></li>
+                           <li><a href="#">Storia</a></li>
+                           <li><a href="#">Gestione</a></li>
+                           <li role="separator" class="divider"></li>
+                           <li><a href="#">Regole</a></li>
+                        </ul>
+                     </li>
 
                      <!-- Come Raggiungerci -->
                      <li role="presentation" class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Come Raggiungerci</a>
+                        <a href="#" class="dropdown-toggle"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Come Raggiungerci<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                           <li><a href="#">Action</a></li>
-                           <li><a href="#">Another action</a></li>
-                           <li><a href="#">Something else here</a></li>
-                           <li role="separator" class="divider"></li>
-                           <li><a href="#">Separated link</a></li>
+                           <li><a href="#">Indicazioni in treno, auto, aereo</a></li>
+                           <li><a href="#">Supporto per il Viaggio</a></li>
                         </ul>
                      </li>
 
                      <!-- Esplora il Nostro Territorio -->
-                     <li role="presentation" class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Esplora il Nostro Territorio</a>
-                        <ul class="dropdown-menu">
-                           <li><a href="#">Action</a></li>
-                           <li><a href="#">Another action</a></li>
-                           <li><a href="#">Something else here</a></li>
-                           <li role="separator" class="divider"></li>
-                           <li><a href="#">Separated link</a></li>
-                        </ul>
-                     </li>
+                     <li><a href="#">Esplora il nostro Territorio</a></li>
 
                      <!-- Percorsi -->
-                     <li role="presentation" class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Percorsi</a>
-                        <ul class="dropdown-menu">
-                           <li><a href="#">Action</a></li>
-                           <li><a href="#">Another action</a></li>
-                           <li><a href="#">Something else here</a></li>
-                           <li role="separator" class="divider"></li>
-                           <li><a href="#">Separated link</a></li>
-                        </ul>
-                     </li>
+                     <li><a href="#">Percorsi</a></li>
+                     
+                     <!-- Ospitalità -->
+                     <li><a href="#">Ospitalità</a></li>
                   </ul>
                </div>
             </div>
@@ -105,11 +96,11 @@
 
 
 
-      <div class="container-fluid" style="padding:10px;">
+      <div id="wolf" class="container-fluid">
 
          <div class="row">
             <div class="col-md-7">
-               <h3>Benvenuti nel Parco Nazionale della Majella</h3>
+               <h2>Benvenuti nel Parco Nazionale della Majella</h3>
                <h3>Abruzzo - Italia</h3>
 
                <p>
@@ -131,27 +122,23 @@
 
 
 
-         <div class="row">
-            <div class="col-md-4">
+         <div id="present" class="row">
+            <div id="fiori" class="col-md-6">
                <img src="img/home_fiori.jpg" class="img-responsive" alt="Responsive image">
-               <h2>Heading 1</h2>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem nisi accusamus error velit animi non ipsa placeat. Recusandae, suscipit, soluta quibusdam accusamus a veniam quaerat eveniet eligendi dolor consectetur.</p>
-               <a class="btn btn-default" href="#">More Info</a>
+               <h2>Natura</h2>
+               <p>Il Parco, la cui altitudine va dai 130 ai 2793 m di M. Amaro, è costituito da rilievi carbonatici che superano o sfiorano i 2000 m, Majella, Morrone, Porrara, Pizzalto e Rotella, separati da valli e da pianori carsici.
+Dal punto di vista geologico, la Majella è il massiccio più singolare dell’Appennino...</p>
+               <a id="moreinfo" class="btn btn-default arancione" href="#">More Info</a>
             </div>
             <!-- /.col-md-4 -->
-            <div class="col-md-4">
+            <div id="colline" class="col-md-6">
                <img src="img/home_deserto.jpg" class="img-responsive" alt="Responsive image">
-               <h2>Heading 2</h2>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem nisi accusamus error velit animi non ipsa placeat. Recusandae, suscipit, soluta quibusdam accusamus a veniam quaerat eveniet eligendi dolor consectetur.</p>
-               <a class="btn btn-default" href="#">More Info</a>
+               <h2>Territorio</h2>
+               <p>L’agricoltura nasce, nell’area della Majella come nel resto del territorio abruzzese, tra il VI ed il V millennio a.C. 
+Il passaggio dall’uomo cacciatore-raccoglitore a quello agricoltore-allevatore dà inizio a una delle più grandi rivoluzioni della storia dell’umanità. </p>
+               <a id="moreinfo" class="btn btn-default arancione" href="#">More Info</a>
             </div>
             <!-- /.col-md-4 -->
-            <div class="col-md-4">
-               <img src="img/home_deserto.jpg" class="img-responsive" alt="Responsive image">
-               <h2>Heading 3</h2>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem nisi accusamus error velit animi non ipsa placeat. Recusandae, suscipit, soluta quibusdam accusamus a veniam quaerat eveniet eligendi dolor consectetur.</p>
-               <a class="btn btn-default" href="#">More Info</a>
-            </div>
 
 
 
@@ -170,8 +157,15 @@
 
          <div class="row">
             <div class="col-sm-4">
-               <h3> &copy;2016 Parco Majella </h3>
-               <h5>robe da scrivere ahahahahsdahsdlashjdlaksjdalksjdlaskjdlaksjdlaksjdla <br> a capo blabla</h5>
+               <address>
+                  <strong>Parco Della Majella</strong><br>
+                  <br>
+                  S.Leg.: Guardiagrele (CH) - S.Op.: Sulmona (AQ)<br>
+                  Tel 0864/8732893 - Fax 0864/8823373 - PI 0273933
+                  
+                  <a href="#">info@parcomajella.it</a>
+                  
+               </address>
             </div>
             <div class="col-sm-8">
                <img src="img/foot.png" class="img-responsive" alt="Responsive image">
