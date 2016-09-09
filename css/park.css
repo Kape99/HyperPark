@@ -1,10 +1,24 @@
 
 
 body {
-  /*  padding-top: 70px;  Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+   padding-top: 20px; /*Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+}
+.navbar {
+    margin-bottom: 0px;
+}
+
+.back-image{
+    background-image: url('content/monti.jpg');
 }
 
 
+@media screen and (min-width: 0px) and (max-width: 767px) {
+  #logos { display: none; }  /* show it on small screens */
+}
+
+@media screen and (min-width: 768px) and (max-width: 2048px) {
+  #logos { display: block; }   /* hide it elsewhere */
+}
 .row-padded {
   padding: 35px;
   background-color: #F7F7F7;

@@ -20,7 +20,6 @@
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
@@ -31,103 +30,114 @@
 
 
 
-    <!-- Testata -->
-    <div class="container" style="height: 1000px; position: relative">
-        <!-- TUTTE LE ROBE SCRITTE CON PIXEL SONO DA RIFARE-->
-        <!-- questa testata e' da rifare da capo -->
-        <!-- 300 px da sistemare ....se rimpicciolisci troppo la scheda la distanza tra gli elementi e il menu non cambia-->
-        <div id="header" style="height: 400px;">
-
-            <!-- Mountains picture -->
-            <img src="content/monti.jpg" style="position: absolute;top: 70px ; left: 5%;  width: 90%; height: auto" />
-
-            <!-- NavigationBar -->
-            <div class="" style="position: absolute; top: 29px;  left: 25% ">
-                <ul class="nav nav-tabs">
-
-                    <!-- About us -->
-                    <li class="dropdown">
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown">
-                            About us <span class="caret"></span>
-                          </a>
-                        <ul class="dropdown-menu" data-toggle="dropdown" role="button">
-                            <li><a href="#">Introduzione al parco</a></li>
-
-                            <li><a href="#">Storia</a></li>
-                            <li><a href="#">Gestione</a></li>
-                            <li><a href="#">Regole</a></li>
-                        </ul>
-                    </li>
 
 
+    <div class="container">
 
-                    <!-- Come Raggiungerci -->
-                    <li class="dropdown">
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown">
-                Come Raggiungerci <span class="caret"></span>
-              </a>
-                        <ul class="dropdown-menu" data-toggle="dropdown" role="button">
-                            <li><a href="#">Come raggiungerci</a></li>
-                            <li><a href="#">Supporto per il viaggio</a></li>
-                        </ul>
-                    </li>
+        <header style="background: url('content/monti.jpg');background-repeat: no-repeat ; background-size:100% 100%">
 
-                    <!-- Esplora il Nostro Territorio -->
-                    <li class="dropdown">
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown">
-              
-                  Esplora il Nostro Territorio
-                </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </li>
 
-                    <!-- Percorsi -->
-                    <li role="presentation">
-                        <a href="#">
-                  Percorsi
-                </a>
+            <nav class="navbar navbar-default " style="background-color: #e3f2fd;">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                 </button>
+                        <a class="navbar-brand" href="#">Il parco</a>
+                    </div>
 
-                    </li>
 
-                    <!-- Dove Alloggiare -->
-                    <li role="presentation">
-                        <a href="">  Dove Alloggiare   </a>
-                    </li>
-                </ul>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li role="presentation"><a href="#">About Us</a></li>
+
+                            <!-- Come Raggiungerci -->
+                            <li role="presentation" class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Come Raggiungerci</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Esplora il Nostro Territorio -->
+                            <li role="presentation" class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Esplora il Nostro Territorio</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Percorsi -->
+                            <li role="presentation" class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Percorsi</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </li>
+                    </div>
+                </div>
+            </nav>
+            <div id="logos">
+                <div class="container-fluid">
+                    <div class="col-sm-2">
+                        <img src="content/logo_majella.jpg" class="img-responsive" alt="Responsive image" />
+                    </div>
+                    <div class="col-sm-10">
+
+                    </div>
+                </div>
             </div>
+        </header>
 
-            <!-- Logo -->
-            <img src="content/logo_majella.jpg" style="position: absolute; top: 30px; left: 10%; width:10%" />
 
+
+
+        <!-- REAL BODY AFTER NAVBARSSSSSASDASDASDASDASDASDASD-->
+
+
+
+        <div class="container-fluid" style="padding:10px;">
+
+            <div class="row">
+                <div class="col-md-7">
+                    <h3>Benvenuti nel Parco Nazionale della Majella</h3>
+                    <h3>Abruzzo - Italia</h3>
+
+                    <p>
+                        Un Parco tutto di montagna, la Montagna Madre d’Abruzzo nella parte più impervia e selvaggia dell'Appennino Centrale, la Montagna “Sacra”, perché pervasa da una sacralità monumentale che da sempre ispira profonda religiosità e per questo tanto cara al Papa Celestino V e agli eremiti.
+                        Il Parco del Lupo, dell'Orso, dei vasti pianori d'alta quota e dei canyons selvaggi e imponenti, ma anche il Parco degli Eremi, delle Abbazie, delle capanne in pietra a secco, dei meravigliosi centri storici dei Comuni che ne fanno parte.
+                        Un Parco che vi aspetta con tutto il calore, la gentilezza e l'ospitalità proprie dell'Abruzzo forte e gentile.
+                    </p>
+                </div>
+                <div class="col-md-5">
+
+                    <img src="img/lupo_8.jpg" class="img-responsive" alt="Responsive image" />
+
+
+                </div>
+
+            </div>
         </div>
+        <div class="jumbotron jumbotron-fluid">
 
 
-    </div>
-    <!--
 
-   <div class="container">
-      <div class="row">
-         <div class="col-md-7">
-            scritte
-         </div>
-         <div class="col-md-5">
-           immagine lupo
 
-         </div>
-
-      </div>
-   </div>
-   <div class="jumbotron jumbotron-fluid">
--->
-
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container" id="home2">
 
             <div class="row">
                 <div class="col-md-4">
@@ -150,90 +160,77 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem nisi accusamus error velit animi non ipsa placeat. Recusandae, suscipit, soluta quibusdam accusamus a veniam quaerat eveniet eligendi dolor consectetur.</p>
                     <a class="btn btn-default" href="#">More Info</a>
                 </div>
-            </div>
-    <!-- Mountains picture -->
-    <img src="content/monti.jpg" style="position: absolute;top: 70px ; left: 5%;  width: 90%; height: auto" />
 
-    <!-- NavigationBar -->
-    <div class="" style="position: absolute;top: 29px; left: 25% ">
-        <ul class="nav nav-tabs">
+
+
+            </div>
 
         </div>
 
 
-    </div>
 
 
 
-    <!--   FOOOOOOOOOOTEEEEERRRRRR  -->
 
-    <footer class="container">
+        <!--   FOOOOOOOOOOTEEEEERRRRRR  -->
 
-        <div class="row">
-            <div class="col-sm-4">
-                <h3> &copy;2016 Parco Majella </h3>
-                <h5>robe da scrivere ahahahahsdahsdlashjdlaksjdalksjdlaskjdlaksjdlaksjdla <br> a capo blabla</h5>
-            </div>
-            <div class="col-sm-8">
-                <img src="img/foot.png" class="img-responsive" alt="Responsive image">
+        <footer class="container">
 
-            </div>
-        </div>
-    </footer>
-
-    <div class="grigio">
-        <div class="container">
             <div class="row">
-                <div class="col-sm-7"></div>
-                <div class="col-sm-1">
-                    <a target="_blank" href="http://www.google.it">
-                        <p class="text-center"> Privacy</p>
-                    </a>
+                <div class="col-sm-4">
+                    <h3> &copy;2016 Parco Majella </h3>
+                    <h5>robe da scrivere ahahahahsdahsdlashjdlaksjdalksjdlaskjdlaksjdlaksjdla <br> a capo blabla</h5>
                 </div>
-                <div class="col-sm-2">
-                    <a target="_blank" href="http://www.google.it">
-                        <p class="text-center">Informativa sui cookies</p>
-                    </a>
+                <div class="col-sm-8">
+                    <img src="img/foot.png" class="img-responsive" alt="Responsive image">
+
                 </div>
-                <div class="col-sm-1">
-                    <a target="_blank" href="http://www.google.it">
-                        <p class="text-center">Note legali</p>
-                    </a>
-                </div>
-                <div class="col-sm-1">
-                    <a target="_blank" href="http://www.google.it">
-                        <p class="text-center">Credits</p>
-                    </a>
-                </div>
+            </div>
+        </footer>
+
+        <div class="grigio">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-1">
+                        <a target="_blank" href="http://www.google.it">
+                            <p class="text-center"> Privacy</p>
+                        </a>
+                    </div>
+                    <div class="col-sm-2">
+                        <a target="_blank" href="http://www.google.it">
+                            <p class="text-center">Informativa sui cookies</p>
+                        </a>
+                    </div>
+                    <div class="col-sm-1">
+                        <a target="_blank" href="http://www.google.it">
+                            <p class="text-center">Note legali</p>
+                        </a>
+                    </div>
+                    <div class="col-sm-1">
+                        <a target="_blank" href="http://www.google.it">
+                            <p class="text-center">Credits</p>
+                        </a>
+                    </div>
+                    <div class="col-sm-1">
+
+                    </div>
 
 
 
+
+                </div>
             </div>
         </div>
-    </div>
 
+
+    </div>
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-
-    <!--   
-    <script>
-        $( document ).ready(function() {
-            caricacose();
-        });
-        
-        function caricacose(){
-            
-            $.ajax()
-            
-            $("#home2").html("aaaaa");
-        }
-
-    </script>
-    ?-->
 </body>
 
 
