@@ -9,7 +9,19 @@ body {
     background-color: rgb(4,34,71);
 }
 
-#wolf {
+
+
+h1 .gallery{
+    font-weight: bolder;
+}
+
+#gallery{
+    background-image: url("img./gallery-fiori.jpg");
+    text-align: center;
+}
+
+
+#intro {
    padding:50px 0 50px 0;
 }
 .bianco { color: #FFF; }
@@ -41,7 +53,7 @@ body {
 .grigio {
     opacity: 0.8;
     background-color: #555;
-   margin: 3px;   
+   margin: 3px;
    padding: 3px ;
 }
 
