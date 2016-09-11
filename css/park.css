@@ -1,0 +1,63 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,700,700italic);
+
+body {
+   font-family: 'Open Sans', sans-serif; font-size: 14px; font-weight: 300; color: #555; margin: 0; padding: 0;padding-top: 20px; /*Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+}
+
+.navbar {
+    margin-bottom: 0px;
+    background-color: rgb(4,34,71);
+}
+
+
+
+h1 .gallery{
+    font-weight: bolder;
+}
+
+#gallery{
+    background-image: url("img./gallery-fiori.jpg");
+    text-align: center;
+}
+
+
+#intro {
+   padding:50px 0 50px 0;
+}
+.bianco { color: #FFF; }
+
+.arancione{
+    background-color: #e69138;
+    color: #FFF;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+  #logos { display: none; }  /* show it on small screens */
+}
+
+@media screen and (min-width: 768px) and (max-width: 2048px) {
+  #logos { display: block; }   /* hide it elsewhere */
+}
+.row-padded {
+  padding: 35px;
+  background-color: #F7F7F7;
+  border: 1px solid #DDD;
+}
+
+.row-padded .span4 {
+  background-color: #bbb;
+  width: 30%;
+}
+
+.grigio {
+    opacity: 0.8;
+    background-color: #555;
+   margin: 3px;
+   padding: 3px ;
+}
+
+.grigio p {
+   color: #FFF;
+   margin-top: 5px;
+}
