@@ -1,6 +1,5 @@
 <?php
 
-
     function dbconnect() {
         $dbhost = "localhost";
         $dbuser = "parcomajella";
@@ -17,6 +16,7 @@
     }
     
     function dbdisconnet() {
-         mysqli_close($connection);
+        mysqli_close($connection);
     }
+    
 ?>
