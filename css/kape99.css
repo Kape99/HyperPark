@@ -1,3 +1,49 @@
+
+.test{
+    position: relative;
+}
+.test2{
+    position: absolute;
+    top:35%;
+    left:40%
+}
+.thumbnail{
+    background-color:  #444444;
+    height: auto;
+    width: 100%;
+    background-size: 100% 100%;
+}
+
+#head{
+    background: url('../content/monti.jpg');
+    background-repeat: no-repeat ;
+    background-size:100% 100%;
+}
+
+#imgflora{
+    opacity: 0.9;
+}
+
+#imgflora:hover{
+    transition: 2s;
+    opacity: 0.5;
+}
+
+
+h2.titolo{
+    font-weight: bold;
+}
+
+h3.sottotitolo{
+    font-weight: bold;
+    color: #ff6d00;
+}
+
+
+
+
+
+
 /* Dropdown Button */
 .dropbtn {
     background-color: #ffffff;
