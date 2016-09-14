@@ -8,26 +8,27 @@
     left:40%
 }
 .thumbnail{
+    text-align: center;
     background-color:  #bbbbbb;
     height: auto;
     width: 100%;
     background-size: 100% 100%;
 }
 
-#head{
+#head {
     background: url('../content/monti.jpg');
     background-repeat: no-repeat ;
     background-size:100% 100%;
 }
 
-#imgflora{
-    opacity: 0.9;
-}
+ img.thumb{
+   opacity:0.8
+ }
 
-#imgflora:hover{
-    transition: 2s;
-    opacity: 0.5;
-}
+ img.thumb:hover {
+   transition: 2s;
+   opacity: 1;
+ }
 
 
 h2.titolo{
@@ -37,6 +38,7 @@ h2.titolo{
 h3.sottotitolo{
     font-weight: bold;
     color: #ff6d00;
+    text-decoration-color: #ff6d00;
 }
 
 
