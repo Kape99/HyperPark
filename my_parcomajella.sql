@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.7
+-- version 4.5.2
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Set 13, 2016 alle 14:33
--- Versione del server: 5.6.31-log
--- PHP Version: 5.3.10
+-- Creato il: Set 14, 2016 alle 19:08
+-- Versione del server: 10.1.13-MariaDB
+-- Versione PHP: 5.6.20
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `my_parcomajella`
@@ -26,28 +26,28 @@ SET time_zone = "+00:00";
 -- Struttura della tabella `ANIMALE`
 --
 
-CREATE TABLE IF NOT EXISTS `ANIMALE` (
+CREATE TABLE `ANIMALE` (
+  `ID` int(11) NOT NULL,
   `NOME` varchar(500) NOT NULL,
   `THUMBNAIL` varchar(500) NOT NULL,
   `DESCRIZIONEBREVE` text NOT NULL,
-  `DESCRIZIONELUNGA` text NOT NULL,
-  PRIMARY KEY (`NOME`)
+  `DESCRIZIONELUNGA` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dump dei dati per la tabella `ANIMALE`
 --
 
-INSERT INTO `ANIMALE` (`NOME`, `THUMBNAIL`, `DESCRIZIONEBREVE`, `DESCRIZIONELUNGA`) VALUES
-('Lupo appenninico', 'img/MAMMIFERI-Lupo-appenninico-incontro.jpg', 'Attualmente la popolazione del Parco si è stabilizzata ed è costituita da una decina di branchi riproduttivi con una consistenza complessiva di circa 70-80 individui, considerando sia gli animali presenti all’interno dei branchi che gli individui in dispersione.', ''),
-('Orso bruno marsicano', 'img/MAMMIFERI-Orso-marsicano-primo-piano.jpg', 'Questa specie è difficilmente osservabile all''interno del Parco. I graffi degli artigli sui tronchi, i ciuffi di peli sugli alberi ricchi di resina, usati come grattatoi, e le orme su fango o su neve sono spesso gli unici segni che ne indicano la presenza. ', ''),
-('Aquila reale', 'img/UCCELLI-Aquila-reale-volo.jpg', 'Con una apertura alare di oltre due metri, artigli robusti e con un becco estremamente affilato, l''Aquila reale è da sempre simbolo di maestosità. ', ''),
-('Vipera di Orsini', 'img/RETTILI-Vipera-di-Orsini-particolare.jpg', 'A causa dell’indole docile e poco aggressiva, ma anche del debole veleno, utilizzato per paralizzare gli ortotteri di cui quasi esclusivamente si nutre, è considerata la vipera meno pericolosa d’Europa e risulta totalmente innocua per l’uomo.', ''),
-('Coturnice', 'img/Coturnice.jpg', 'Si riconosce per il becco e le zampe rosso vivo, il piumaggio grigio ardesia con da numerose barre scure sui fianchi ed il capo contraddistinto da una striscia nera che dalla base del becco attraversa l''occhio, gira sotto l''orecchio per scendere sul petto. ', '_Alectoris graeca orlandoi_\r\nDi aspetto simile a una pernice, la Coturnice si riconosce per il becco e le zampe rosso vivo, il piumaggio grigio ardesia caratterizzato da numerose barre scure sui fianchi ed il capo contraddistinto da una striscia nera che dalla base del becco attraversa l''occhio, gira sotto l''orecchio per scendere sul petto.\r\nSpecie sedentaria, compie infatti solo migrazioni altitudinali tra le aree estive spesso ad alta quota e quelle di svernamento ad altitudini minori, è distribuita lungo la catena appenninica e in Sicilia, con due sottospecie distinte e diverse da quelle presenti sulle Alpi e sui Balcani.\r\nVive esclusivamente in ambienti rocciosi, alternati a ripidi pascoli e pendii pietrosi ma anche in presenza di arbusti, sulla Majella costituiti soprattutto da pini mughi. Il nido viene costruito in aree difficilmente accessibili ai predatori, generalmente tra le rocce, ben mimetizzato dalla vegetazione.'),
-('Salamandrina di savi', 'img/ANFIBI-Salamandrina-di-Savi-in-acqua.jpg', 'Se disturbata può fingersi morta mettendo in atto un comportamento noto come tanatosi oppure solleva la coda verticalmente o la arrotola sul dorso, mostrando il vivace colore rosso delle parti ventrali, per disorientare i predatori.', ''),
-('Salamandra', 'img/ANFIBI-Salamandra-appenninica-habitat-della-Salamandra.jpg', 'Anfibio Urodelo dall’aspetto tozzo e robusto, che raggiunge i 20 cm di lunghezza, la salamandra appenninica è resa  inconfondibile dalla presenza di macchie giallo-arancio di forma e dimensioni varie sul corpo nero lucente.', ''),
-('Ululone appenninico', 'img/ANFIBI-Ululone-Appenninico-particolare.jpg', 'L''ululone è un piccolo rospo con caratteristica pupilla cuoriforme, lungo al massimo 5 cm, inconfondibile per la sua colorazione dorsale grigiastra che contrasta con il ventre vivacemente colorato di giallo intenso con macchie grigio-bluastre.', ''),
-('Camoscio d''Abruzzo', 'img/MAMMIFERI-Camoscio-appenninico-montagna.jpg', 'Durante il periodo invernale i branchi di camoscio compiono degli spostamenti dalle aree estive e autunnali per arrivare a svernare nelle lunghe e selvagge valli presenti nel versante orientale del massiccio della Majella. ', '');
+INSERT INTO `ANIMALE` (`ID`, `NOME`, `THUMBNAIL`, `DESCRIZIONEBREVE`, `DESCRIZIONELUNGA`) VALUES
+(1, 'Lupo appenninico', 'img/MAMMIFERI-Lupo-appenninico-incontro.jpg', 'Attualmente la popolazione del Parco si è stabilizzata ed è costituita da una decina di branchi riproduttivi con una consistenza complessiva di circa 70-80 individui, considerando sia gli animali presenti all’interno dei branchi che gli individui in dispersione.', ''),
+(2, 'Orso bruno marsicano', 'img/MAMMIFERI-Orso-marsicano-primo-piano.jpg', 'Questa specie è difficilmente osservabile all''interno del Parco. I graffi degli artigli sui tronchi, i ciuffi di peli sugli alberi ricchi di resina, usati come grattatoi, e le orme su fango o su neve sono spesso gli unici segni che ne indicano la presenza. ', ''),
+(3, 'Aquila reale', 'img/UCCELLI-Aquila-reale-volo.jpg', 'Con una apertura alare di oltre due metri, artigli robusti e con un becco estremamente affilato, l''Aquila reale è da sempre simbolo di maestosità. ', ''),
+(4, 'Vipera di Orsini', 'img/RETTILI-Vipera-di-Orsini-particolare.jpg', 'A causa dell’indole docile e poco aggressiva, ma anche del debole veleno, utilizzato per paralizzare gli ortotteri di cui quasi esclusivamente si nutre, è considerata la vipera meno pericolosa d’Europa e risulta totalmente innocua per l’uomo.', ''),
+(5, 'Coturnice', 'img/Coturnice.jpg', 'Si riconosce per il becco e le zampe rosso vivo, il piumaggio grigio ardesia con da numerose barre scure sui fianchi ed il capo contraddistinto da una striscia nera che dalla base del becco attraversa l''occhio, gira sotto l''orecchio per scendere sul petto. ', '_Alectoris graeca orlandoi_\r\nDi aspetto simile a una pernice, la Coturnice si riconosce per il becco e le zampe rosso vivo, il piumaggio grigio ardesia caratterizzato da numerose barre scure sui fianchi ed il capo contraddistinto da una striscia nera che dalla base del becco attraversa l''occhio, gira sotto l''orecchio per scendere sul petto.\r\nSpecie sedentaria, compie infatti solo migrazioni altitudinali tra le aree estive spesso ad alta quota e quelle di svernamento ad altitudini minori, è distribuita lungo la catena appenninica e in Sicilia, con due sottospecie distinte e diverse da quelle presenti sulle Alpi e sui Balcani.\r\nVive esclusivamente in ambienti rocciosi, alternati a ripidi pascoli e pendii pietrosi ma anche in presenza di arbusti, sulla Majella costituiti soprattutto da pini mughi. Il nido viene costruito in aree difficilmente accessibili ai predatori, generalmente tra le rocce, ben mimetizzato dalla vegetazione.'),
+(6, 'Salamandrina di savi', 'img/ANFIBI-Salamandrina-di-Savi-in-acqua.jpg', 'Se disturbata può fingersi morta mettendo in atto un comportamento noto come tanatosi oppure solleva la coda verticalmente o la arrotola sul dorso, mostrando il vivace colore rosso delle parti ventrali, per disorientare i predatori.', ''),
+(7, 'Salamandra', 'img/ANFIBI-Salamandra-appenninica-habitat-della-Salamandra.jpg', 'Anfibio Urodelo dall’aspetto tozzo e robusto, che raggiunge i 20 cm di lunghezza, la salamandra appenninica è resa  inconfondibile dalla presenza di macchie giallo-arancio di forma e dimensioni varie sul corpo nero lucente.', ''),
+(8, 'Ululone appenninico', 'img/ANFIBI-Ululone-Appenninico-particolare.jpg', 'L''ululone è un piccolo rospo con caratteristica pupilla cuoriforme, lungo al massimo 5 cm, inconfondibile per la sua colorazione dorsale grigiastra che contrasta con il ventre vivacemente colorato di giallo intenso con macchie grigio-bluastre.', ''),
+(9, 'Camoscio d''Abruzzo', 'img/MAMMIFERI-Camoscio-appenninico-montagna.jpg', 'Durante il periodo invernale i branchi di camoscio compiono degli spostamenti dalle aree estive e autunnali per arrivare a svernare nelle lunghe e selvagge valli presenti nel versante orientale del massiccio della Majella. ', '');
 
 -- --------------------------------------------------------
 
@@ -55,32 +55,31 @@ INSERT INTO `ANIMALE` (`NOME`, `THUMBNAIL`, `DESCRIZIONEBREVE`, `DESCRIZIONELUNG
 -- Struttura della tabella `CULTURA`
 --
 
-CREATE TABLE IF NOT EXISTS `CULTURA` (
+CREATE TABLE `CULTURA` (
+  `ID` int(11) NOT NULL,
   `NOME` varchar(500) NOT NULL,
   `NOMECOMPLETO` varchar(500) NOT NULL,
   `THUMBNAIL` varchar(500) DEFAULT NULL,
   `DESCRIZIONEBREVE` text NOT NULL,
   `DESCRIZIONE` text,
   `COMUNE` varchar(500) NOT NULL,
-  `LOCALITA` varchar(500) NOT NULL,
-  PRIMARY KEY (`NOME`),
-  UNIQUE KEY `NOMECOMPLETO` (`NOMECOMPLETO`)
+  `LOCALITA` varchar(500) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dump dei dati per la tabella `CULTURA`
 --
 
-INSERT INTO `CULTURA` (`NOME`, `NOMECOMPLETO`, `THUMBNAIL`, `DESCRIZIONEBREVE`, `DESCRIZIONE`, `COMUNE`, `LOCALITA`) VALUES
-('Madonna dell''Altare', 'Madonna dell''Altare', 'img/madonna-dell-altare-esterno.jpg', 'Il santuario è costruito nei pressi della Taverna, la grotta presso cui Pietro da Morrone sostò tra il 1235-1238. Il toponimo deriva dalla forma della roccia su cui la struttura è costruita. ', NULL, '', ''),
-('Tombe rupestri', 'Tombe rupestri', 'img/Tombe-rupestri-Panoramica-sulle-tombe.jpg', 'È comunque possibile ipotizzare, vista la vicinanza con la chiesa di S. Liberatore, che un gruppo di eremiti vivesse nella zona intorno all’VIII–IX secolo e utilizzasse il complesso rupestre come luogo di culto.', NULL, '', ''),
-('S. Angelo di Palombaro', 'S. Angelo di Palombaro', 'img/S-Angelo-di-Palombaro-alla-Grotta-Sant-Angelo.jpg', 'L’unica notizia sul complesso è presente in una bolla datata 1221 di Onorio III il quale conferma l’appartenenza delle chiese di S. Angelo e S. Flaviano di Palombaro al monastero di S. Martino in Valle. ', NULL, '', ''),
-('S. Bartolomeo di Legio', 'S. Bartolomeo di Legio', 'img/S-Bartolomeo-in-Legio-interno.jpg', 'All''interno della chiesa vi è una piccola risorgenza d''acqua. È l''acqua di S. Bartolomeo, dalle proprietà taumaturgiche, che viene raccolta con un cucchiaio e mescolata con l’acqua di una sorgente sul lato destro del sottostante torrente Capo la Vena.', NULL, '', ''),
-('Eremo di S. Germano', 'Eremo di S. Germano', 'img/s-germano-di-pacentro-borgo-Campo-di-Giove.jpg', 'La chiesa fu costruita nei primi decenni del XV secolo, come attesta la data (1428) incisa sull''architrave del portale di facciata. Il settore abitativo dovette sorgere nel XVIII o nel XIX secolo, come testimonia la fattura del portale d''ingresso. ', NULL, '', ''),
-('S. Liberatore a Maiella', 'S. Liberatore a Maiella', 'img/S-Liberatore-a-Majella.jpg', 'Dopo il terremoto del 990 il priore Teobaldo (1007-1022) avviò la ricostruzione del monastero e del suo patrimonio fondiario in parte occupato dai conti di Chieti. Nel sec. XI i Normanni sottoposero il monastero alla loro influenza. ', NULL, '', ''),
-('Eremo di S. Michele', 'Eremo di S. Michele', 'img/S-Michele-di-Pescocostanzo-esterno.jpg', 'Fino alla seconda guerra mondiale vi si celebravano due feste importanti l’8 Maggio e il 29 Settembre. I pellegrini raccoglievano nella grotta un sassolino che conservavano fino alla festa dell’anno successivo. Durante il secondo conflitto mondiale la grotta fu utilizzata come rifugio e base militare.', NULL, '', ''),
-('S. Onofrio del Morrone', 'S. Onofrio del Morrone', 'img/S-Onofrio-al-Morrone-esterno.jpg', 'Quasi certamente l’eremo fu ristrutturato e non fondato da Pietro del Morrone. Secondo i biografi, fra Pietro si fece sistemare una cella sopra al monastero di S. Spirito di Sulmona e vi si trasferì nel giugno del 1293. ', 'Un lungo terrazzo dà accesso al complesso, restaurato dopo l’ultima guerra. La chiesa ha un impianto rettangolare ad aula con soffitto ligneo quattrocentesco. Sulla parete sinistra, in alto, vi sono due affreschi del XV sec. raffiguranti il Cristo Re e San Giovanni Battista. Sulla parete di fondo è la parte più antica dell’eremo: a sinistra un arco dà accesso ad un piccolo oratorio, a destra un corridoio dà accesso a due piccoli ambienti, identificati con le cellette di Pietro del Morrone e di Roberto da Salle. \r\nGli affreschi che ornano l’oratorio - una Crocifissione, una Madonna con il Bambino e i busti di San Mauro e Sant’Antonio ai lati di San Benedetto - sono tradizionalmente attribuiti a Gentile da Rocca (seconda metà del sec. XIII), ma studi recenti mettono in dubbio tale attribuzione. ', 'Sulmona (AQ)', 'Morrone, a circa 620 m. s.l.m.'),
-('Tradizione e folklore', 'Tradizione e folklore', 'img/tradizione-e-folklore.jpg', 'Le feste popolari dei paesi del Parco sono testimonianze importanti di una cultura agro-silvo-pastorale, animate dalle motivazioni di sempre: l’auspicio di un buon raccolto, il timore del sopravvento della natura, la necessità di sconfiggere il male.', NULL, '', '');
+INSERT INTO `CULTURA` (`ID`, `NOME`, `NOMECOMPLETO`, `THUMBNAIL`, `DESCRIZIONEBREVE`, `DESCRIZIONE`, `COMUNE`, `LOCALITA`) VALUES
+(1, 'Madonna dell''Altare', 'Madonna dell''Altare', 'img/madonna-dell-altare-esterno.jpg', 'Il santuario è costruito nei pressi della Taverna, la grotta presso cui Pietro da Morrone sostò tra il 1235-1238. Il toponimo deriva dalla forma della roccia su cui la struttura è costruita. ', NULL, '', ''),
+(2, 'Tombe rupestri', 'Tombe rupestri', 'img/Tombe-rupestri-Panoramica-sulle-tombe.jpg', 'È comunque possibile ipotizzare, vista la vicinanza con la chiesa di S. Liberatore, che un gruppo di eremiti vivesse nella zona intorno all’VIII–IX secolo e utilizzasse il complesso rupestre come luogo di culto.', NULL, '', ''),
+(3, 'S. Angelo di Palombaro', 'S. Angelo di Palombaro', 'img/S-Angelo-di-Palombaro-alla-Grotta-Sant-Angelo.jpg', 'L’unica notizia sul complesso è presente in una bolla datata 1221 di Onorio III il quale conferma l’appartenenza delle chiese di S. Angelo e S. Flaviano di Palombaro al monastero di S. Martino in Valle. ', NULL, '', ''),
+(4, 'S. Bartolomeo di Legio', 'S. Bartolomeo di Legio', 'img/S-Bartolomeo-in-Legio-interno.jpg', 'All''interno della chiesa vi è una piccola risorgenza d''acqua. È l''acqua di S. Bartolomeo, dalle proprietà taumaturgiche, che viene raccolta con un cucchiaio e mescolata con l’acqua di una sorgente sul lato destro del sottostante torrente Capo la Vena.', NULL, '', ''),
+(5, 'Eremo di S. Germano', 'Eremo di S. Germano', 'img/s-germano-di-pacentro-borgo-Campo-di-Giove.jpg', 'La chiesa fu costruita nei primi decenni del XV secolo, come attesta la data (1428) incisa sull''architrave del portale di facciata. Il settore abitativo dovette sorgere nel XVIII o nel XIX secolo, come testimonia la fattura del portale d''ingresso. ', NULL, '', ''),
+(6, 'S. Liberatore a Maiella', 'S. Liberatore a Maiella', 'img/S-Liberatore-a-Majella.jpg', 'Dopo il terremoto del 990 il priore Teobaldo (1007-1022) avviò la ricostruzione del monastero e del suo patrimonio fondiario in parte occupato dai conti di Chieti. Nel sec. XI i Normanni sottoposero il monastero alla loro influenza. ', NULL, '', ''),
+(7, 'Eremo di S. Michele', 'Eremo di S. Michele', 'img/S-Michele-di-Pescocostanzo-esterno.jpg', 'Fino alla seconda guerra mondiale vi si celebravano due feste importanti l’8 Maggio e il 29 Settembre. I pellegrini raccoglievano nella grotta un sassolino che conservavano fino alla festa dell’anno successivo. Durante il secondo conflitto mondiale la grotta fu utilizzata come rifugio e base militare.', NULL, '', ''),
+(8, 'S. Onofrio del Morrone', 'S. Onofrio del Morrone', 'img/S-Onofrio-al-Morrone-esterno.jpg', 'Quasi certamente l’eremo fu ristrutturato e non fondato da Pietro del Morrone. Secondo i biografi, fra Pietro si fece sistemare una cella sopra al monastero di S. Spirito di Sulmona e vi si trasferì nel giugno del 1293. ', 'Un lungo terrazzo dà accesso al complesso, restaurato dopo l’ultima guerra. La chiesa ha un impianto rettangolare ad aula con soffitto ligneo quattrocentesco. Sulla parete sinistra, in alto, vi sono due affreschi del XV sec. raffiguranti il Cristo Re e San Giovanni Battista. Sulla parete di fondo è la parte più antica dell’eremo: a sinistra un arco dà accesso ad un piccolo oratorio, a destra un corridoio dà accesso a due piccoli ambienti, identificati con le cellette di Pietro del Morrone e di Roberto da Salle. \r\nGli affreschi che ornano l’oratorio - una Crocifissione, una Madonna con il Bambino e i busti di San Mauro e Sant’Antonio ai lati di San Benedetto - sono tradizionalmente attribuiti a Gentile da Rocca (seconda metà del sec. XIII), ma studi recenti mettono in dubbio tale attribuzione. ', 'Sulmona (AQ)', 'Morrone, a circa 620 m. s.l.m.'),
+(9, 'Tradizione e folklore', 'Tradizione e folklore', 'img/tradizione-e-folklore.jpg', 'Le feste popolari dei paesi del Parco sono testimonianze importanti di una cultura agro-silvo-pastorale, animate dalle motivazioni di sempre: l’auspicio di un buon raccolto, il timore del sopravvento della natura, la necessità di sconfiggere il male.', NULL, '', '');
 
 -- --------------------------------------------------------
 
@@ -88,15 +87,12 @@ INSERT INTO `CULTURA` (`NOME`, `NOMECOMPLETO`, `THUMBNAIL`, `DESCRIZIONEBREVE`, 
 -- Struttura della tabella `FOTO`
 --
 
-CREATE TABLE IF NOT EXISTS `FOTO` (
-  `ID` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `FOTO` (
+  `ID` int(11) NOT NULL,
   `NOME` varchar(500) NOT NULL,
   `URL` varchar(500) NOT NULL,
-  `TIPO` enum('HH','PERCORSO','PIANTA','ANIMALE','CULTURA','TERRITORIO','HOME','ALTRO') NOT NULL,
-  PRIMARY KEY (`ID`),
-  UNIQUE KEY `NOME` (`NOME`),
-  UNIQUE KEY `URL` (`URL`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=56 ;
+  `TIPO` enum('HH','PERCORSO','PIANTA','ANIMALE','CULTURA','TERRITORIO','HOME','ALTRO') NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dump dei dati per la tabella `FOTO`
@@ -165,19 +161,16 @@ INSERT INTO `FOTO` (`ID`, `NOME`, `URL`, `TIPO`) VALUES
 -- Struttura della tabella `HH`
 --
 
-CREATE TABLE IF NOT EXISTS `HH` (
-  `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id semplice',
+CREATE TABLE `HH` (
+  `ID` int(11) NOT NULL COMMENT 'id semplice',
   `NOME` varchar(500) NOT NULL COMMENT 'nome univoco',
   `THUMBNAIL` varchar(500) NOT NULL,
   `LUOGO` text,
   `IMMAGINELUOGO` varchar(500) DEFAULT NULL,
   `SERVIZI` text,
   `DESCRIZIONE` text,
-  `DESCRIZIONEBREVE` text,
-  PRIMARY KEY (`ID`),
-  UNIQUE KEY `NOME` (`NOME`),
-  KEY `ID` (`ID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+  `DESCRIZIONEBREVE` text
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dump dei dati per la tabella `HH`
@@ -196,8 +189,8 @@ INSERT INTO `HH` (`ID`, `NOME`, `THUMBNAIL`, `LUOGO`, `IMMAGINELUOGO`, `SERVIZI`
 -- Struttura della tabella `PERCORSO`
 --
 
-CREATE TABLE IF NOT EXISTS `PERCORSO` (
-  `ID` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `PERCORSO` (
+  `ID` int(11) NOT NULL,
   `DIFFICOLTA` enum('FACILE','MODERATO','IMPEGNATIVO','DIFFICILE','MOLTODIFFICILE','ESTREMO') DEFAULT NULL,
   `SIGLA` varchar(500) NOT NULL,
   `NOME` varchar(500) DEFAULT NULL,
@@ -209,12 +202,8 @@ CREATE TABLE IF NOT EXISTS `PERCORSO` (
   `FINE` varchar(500) DEFAULT NULL,
   `DURATA` int(11) DEFAULT NULL,
   `LUNGHEZZA` int(11) DEFAULT NULL,
-  `IMMAGINELUOGO` varchar(500) DEFAULT NULL,
-  PRIMARY KEY (`ID`),
-  UNIQUE KEY `SIGLA` (`SIGLA`),
-  UNIQUE KEY `NOME` (`NOME`),
-  KEY `ID` (`ID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
+  `IMMAGINELUOGO` varchar(500) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dump dei dati per la tabella `PERCORSO`
@@ -248,11 +237,9 @@ INSERT INTO `PERCORSO` (`ID`, `DIFFICOLTA`, `SIGLA`, `NOME`, `THUMBNAIL`, `DESCR
 -- Struttura della tabella `PERCORSOANIMALE`
 --
 
-CREATE TABLE IF NOT EXISTS `PERCORSOANIMALE` (
+CREATE TABLE `PERCORSOANIMALE` (
   `percorso` varchar(500) NOT NULL DEFAULT '',
-  `animale` varchar(500) NOT NULL DEFAULT '',
-  PRIMARY KEY (`percorso`,`animale`),
-  KEY `nome_ANIMALE` (`animale`)
+  `animale` varchar(500) NOT NULL DEFAULT ''
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -260,6 +247,7 @@ CREATE TABLE IF NOT EXISTS `PERCORSOANIMALE` (
 --
 
 INSERT INTO `PERCORSOANIMALE` (`percorso`, `animale`) VALUES
+('13', '5'),
 ('Rava del Ferro', 'Coturnice');
 
 -- --------------------------------------------------------
@@ -268,11 +256,9 @@ INSERT INTO `PERCORSOANIMALE` (`percorso`, `animale`) VALUES
 -- Struttura della tabella `PERCORSOCULTURA`
 --
 
-CREATE TABLE IF NOT EXISTS `PERCORSOCULTURA` (
+CREATE TABLE `PERCORSOCULTURA` (
   `percorso` varchar(500) NOT NULL DEFAULT '',
-  `cultura` varchar(500) NOT NULL DEFAULT '',
-  PRIMARY KEY (`percorso`,`cultura`),
-  KEY `nome_CULTURA` (`cultura`)
+  `cultura` varchar(500) NOT NULL DEFAULT ''
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -280,6 +266,7 @@ CREATE TABLE IF NOT EXISTS `PERCORSOCULTURA` (
 --
 
 INSERT INTO `PERCORSOCULTURA` (`percorso`, `cultura`) VALUES
+('15', '8'),
 ('Sentiero dello Spirito', 'S. Onofrio del Morrone');
 
 -- --------------------------------------------------------
@@ -288,11 +275,9 @@ INSERT INTO `PERCORSOCULTURA` (`percorso`, `cultura`) VALUES
 -- Struttura della tabella `PERCORSOHH`
 --
 
-CREATE TABLE IF NOT EXISTS `PERCORSOHH` (
+CREATE TABLE `PERCORSOHH` (
   `percorso` varchar(500) NOT NULL DEFAULT '',
-  `hh` varchar(500) NOT NULL DEFAULT '',
-  PRIMARY KEY (`percorso`,`hh`),
-  KEY `nome_HH` (`hh`)
+  `hh` varchar(500) NOT NULL DEFAULT ''
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -310,11 +295,9 @@ INSERT INTO `PERCORSOHH` (`percorso`, `hh`) VALUES
 -- Struttura della tabella `PERCORSOPIANTA`
 --
 
-CREATE TABLE IF NOT EXISTS `PERCORSOPIANTA` (
+CREATE TABLE `PERCORSOPIANTA` (
   `percorso` varchar(500) NOT NULL DEFAULT '',
-  `pianta` varchar(500) NOT NULL DEFAULT '',
-  PRIMARY KEY (`percorso`,`pianta`),
-  FULLTEXT KEY `pianta` (`pianta`)
+  `pianta` varchar(500) NOT NULL DEFAULT ''
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -322,6 +305,7 @@ CREATE TABLE IF NOT EXISTS `PERCORSOPIANTA` (
 --
 
 INSERT INTO `PERCORSOPIANTA` (`percorso`, `pianta`) VALUES
+('1', '1'),
 ('Sentiero della Libertà', 'Acero di Lobel');
 
 -- --------------------------------------------------------
@@ -330,32 +314,145 @@ INSERT INTO `PERCORSOPIANTA` (`percorso`, `pianta`) VALUES
 -- Struttura della tabella `PIANTA`
 --
 
-CREATE TABLE IF NOT EXISTS `PIANTA` (
+CREATE TABLE `PIANTA` (
+  `ID` int(11) NOT NULL,
   `NOME` varchar(500) NOT NULL,
   `THUMBNAIL` varchar(500) DEFAULT NULL,
   `NOMESCIENTIFICO` text,
   `DESCRIZIONEBREVE` text,
   `DESCRIZIONELUNGA` text,
   `FAMIGLIA` text,
-  `DISTRIBUZIONE` text,
-  PRIMARY KEY (`NOME`)
+  `DISTRIBUZIONE` text
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dump dei dati per la tabella `PIANTA`
 --
 
-INSERT INTO `PIANTA` (`NOME`, `THUMBNAIL`, `NOMESCIENTIFICO`, `DESCRIZIONEBREVE`, `DESCRIZIONELUNGA`, `FAMIGLIA`, `DISTRIBUZIONE`) VALUES
-('acero di lobel', 'img/AceroDiLodel.jpg', 'Acer cappadocicum Gled. subsp. lobelii (Ten.) Murray.', 'Albero caducifoglio alto fino a 20 m, con tronco liscio e slanciato; le foglie sono opposte e con lamina palmato-lobata terminanti in punta acutissima, senza denti laterali. Il frutto è una disamara con ali divergenti ad angolo ottuso o piatto. Fiorisce tra aprile e maggio e matura i frutti tra settembre e ottobre.', 'Albero caducifoglio alto fino a 20 m, con tronco liscio e slanciato; le foglie sono opposte e con lamina palmato-lobata terminanti in punta acutissima, senza denti laterali. Il frutto è una disamara con ali divergenti ad angolo ottuso o piatto. Fiorisce tra aprile e maggio e matura i frutti tra settembre e ottobre. , Specie endemica dell’Appennino Centro-Meridionale.', 'aceraceae', 'Specie endemica dell’Appennino Centro-Meridionale.'),
-('adonide curvata', 'img/Flora-del-parco-Adonide-curvata.jpg', 'aldo', 'Pianta erbacea perenne alta 5-20 cm, con vistosi fiori gialli costituiti da 8-18 petali. Fiorisce da giugno ad agosto, sui brecciai di altitudine tra i 2000 e 2500 m s.l.m.', 'Pianta erbacea perenne alta 5-20 cm, con vistosi fiori gialli costituiti da 8-18 petali. Fiorisce da giugno ad agosto, sui brecciai di altitudine tra i 2000 e 2500 m s.l.m.', 'ciao', 'ciao'),
-('androsace abruzzese', 'img/Flora-del-parco-Androsace-abruzzese.jpg', NULL, 'Pianta alta 1-3 cm, con fusti legnosi alla base, corti, formanti un denso cespuglietto, con fiori bianchi o rosei isolati su lunghi peduncoli. Vegeta sulle rupi ombrose del piano alpino, oltre i 2300 m s.l.m., e fiorisce tra  giugno e luglio.', NULL, NULL, NULL),
-('androsace appenninica', 'img/Flora-del-parco-androsace-villosa.jpg', NULL, 'Pianta alta 2-3 cm, con fusti legnosi, ramificati alla base, formanti densi cuscinetti, con fiori bianchi, soffusi di roseo al centro. Fiorisce a giugno-luglio nei pascoli pietrosi delle alte quote, oltre i 2000 m s.l.m.', NULL, NULL, NULL),
-('aquilegia della majella', 'img/Flora-del-Parco-specie-Aquilegia.jpg', NULL, 'Pianta perenne, vischiosa, alta fino a 45 cm. Foglie addensate nella porzione inferiore del fusto. Fiori di 3-4 cm, da viola pallido ad azzurro chiaro fino a quasi bianchi, con caratteristici nettarii provvisti di sperone. Fiorisce da giugno a luglio.', NULL, NULL, NULL),
-('astragalo aquilano', 'img/csm_Astragalus_aquilanus_2__fiore_e_frutto_LucianoDiMartino_copia_21eba7c044.jpg', NULL, 'Pianta erbacea perenne alta 30-50 cm con fusti legnosi alla base e foglie alterne, imparipennate, con segmenti strettamente ellittici. Fiori gialli riuniti su lunghi peduncoli, visibili a maggio-giugno. Vive in radure e pascoli della fascia submontana.', NULL, NULL, NULL),
-('ciombolino abruzzese', 'img/Flora-del-Parco-specie-Ciombolino-abruzzese.jpg', NULL, 'Pianta erbacea perenne alta 10-20 cm con foglie opposte, arrotondate, con 3-5 lobi di cui l’apicale più grande. Fiori azzurri o violacei con sperone di circa 10 mm, visibili da giugno ad agosto. Vive su ghiaioni altomontani.', NULL, NULL, NULL),
-('nigritella di widder', 'img/Flora-del-parco-nigritella.jpg', NULL, 'Pianta erbacea alta sino a 20 cm, con infiorescenza emisferica e fiori rosei, tendenti a sbiadire fin quasi al bianco con l’età, con profumo di cioccolata. Vegeta nei pascoli altomontani al di sopra dei 2000 m s.l.m.', NULL, NULL, NULL),
-('scarpetta di venere', 'img/Flora-del-parco-scarpetta-di-venere.jpg', NULL, 'Pianta erbacea alta sino a 50 cm con 3-4 foglie abbraccianti il caule e 1 o 2 fiori grandi. Il fiore con il labello giallo e rigonfio ricorda una pantofola ed è il motivo che gli ha conferito il nome di "scarpetta di Venere". Fiorisce a maggio.', NULL, NULL, NULL);
+INSERT INTO `PIANTA` (`ID`, `NOME`, `THUMBNAIL`, `NOMESCIENTIFICO`, `DESCRIZIONEBREVE`, `DESCRIZIONELUNGA`, `FAMIGLIA`, `DISTRIBUZIONE`) VALUES
+(1, 'acero di lobel', 'img/AceroDiLodel.jpg', 'Acer cappadocicum Gled. subsp. lobelii (Ten.) Murray.', 'Albero caducifoglio alto fino a 20 m, con tronco liscio e slanciato; le foglie sono opposte e con lamina palmato-lobata terminanti in punta acutissima, senza denti laterali. Il frutto è una disamara con ali divergenti ad angolo ottuso o piatto. Fiorisce tra aprile e maggio e matura i frutti tra settembre e ottobre.', 'Albero caducifoglio alto fino a 20 m, con tronco liscio e slanciato; le foglie sono opposte e con lamina palmato-lobata terminanti in punta acutissima, senza denti laterali. Il frutto è una disamara con ali divergenti ad angolo ottuso o piatto. Fiorisce tra aprile e maggio e matura i frutti tra settembre e ottobre. , Specie endemica dell’Appennino Centro-Meridionale.', 'aceraceae', 'Specie endemica dell’Appennino Centro-Meridionale.'),
+(2, 'adonide curvata', 'img/Flora-del-parco-Adonide-curvata.jpg', 'aldo', 'Pianta erbacea perenne alta 5-20 cm, con vistosi fiori gialli costituiti da 8-18 petali. Fiorisce da giugno ad agosto, sui brecciai di altitudine tra i 2000 e 2500 m s.l.m.', 'Pianta erbacea perenne alta 5-20 cm, con vistosi fiori gialli costituiti da 8-18 petali. Fiorisce da giugno ad agosto, sui brecciai di altitudine tra i 2000 e 2500 m s.l.m.', 'ciao', 'ciao'),
+(3, 'androsace abruzzese', 'img/Flora-del-parco-Androsace-abruzzese.jpg', NULL, 'Pianta alta 1-3 cm, con fusti legnosi alla base, corti, formanti un denso cespuglietto, con fiori bianchi o rosei isolati su lunghi peduncoli. Vegeta sulle rupi ombrose del piano alpino, oltre i 2300 m s.l.m., e fiorisce tra  giugno e luglio.', NULL, NULL, NULL),
+(4, 'androsace appenninica', 'img/Flora-del-parco-androsace-villosa.jpg', NULL, 'Pianta alta 2-3 cm, con fusti legnosi, ramificati alla base, formanti densi cuscinetti, con fiori bianchi, soffusi di roseo al centro. Fiorisce a giugno-luglio nei pascoli pietrosi delle alte quote, oltre i 2000 m s.l.m.', NULL, NULL, NULL),
+(5, 'aquilegia della majella', 'img/Flora-del-Parco-specie-Aquilegia.jpg', NULL, 'Pianta perenne, vischiosa, alta fino a 45 cm. Foglie addensate nella porzione inferiore del fusto. Fiori di 3-4 cm, da viola pallido ad azzurro chiaro fino a quasi bianchi, con caratteristici nettarii provvisti di sperone. Fiorisce da giugno a luglio.', NULL, NULL, NULL),
+(6, 'astragalo aquilano', 'img/csm_Astragalus_aquilanus_2__fiore_e_frutto_LucianoDiMartino_copia_21eba7c044.jpg', NULL, 'Pianta erbacea perenne alta 30-50 cm con fusti legnosi alla base e foglie alterne, imparipennate, con segmenti strettamente ellittici. Fiori gialli riuniti su lunghi peduncoli, visibili a maggio-giugno. Vive in radure e pascoli della fascia submontana.', NULL, NULL, NULL),
+(7, 'ciombolino abruzzese', 'img/Flora-del-Parco-specie-Ciombolino-abruzzese.jpg', NULL, 'Pianta erbacea perenne alta 10-20 cm con foglie opposte, arrotondate, con 3-5 lobi di cui l’apicale più grande. Fiori azzurri o violacei con sperone di circa 10 mm, visibili da giugno ad agosto. Vive su ghiaioni altomontani.', NULL, NULL, NULL),
+(8, 'nigritella di widder', 'img/Flora-del-parco-nigritella.jpg', NULL, 'Pianta erbacea alta sino a 20 cm, con infiorescenza emisferica e fiori rosei, tendenti a sbiadire fin quasi al bianco con l’età, con profumo di cioccolata. Vegeta nei pascoli altomontani al di sopra dei 2000 m s.l.m.', NULL, NULL, NULL),
+(9, 'scarpetta di venere', 'img/Flora-del-parco-scarpetta-di-venere.jpg', NULL, 'Pianta erbacea alta sino a 50 cm con 3-4 foglie abbraccianti il caule e 1 o 2 fiori grandi. Il fiore con il labello giallo e rigonfio ricorda una pantofola ed è il motivo che gli ha conferito il nome di "scarpetta di Venere". Fiorisce a maggio.', NULL, NULL, NULL);
 
+--
+-- Indici per le tabelle scaricate
+--
+
+--
+-- Indici per le tabelle `ANIMALE`
+--
+ALTER TABLE `ANIMALE`
+  ADD PRIMARY KEY (`ID`),
+  ADD UNIQUE KEY `ID` (`ID`);
+
+--
+-- Indici per le tabelle `CULTURA`
+--
+ALTER TABLE `CULTURA`
+  ADD PRIMARY KEY (`ID`),
+  ADD UNIQUE KEY `NOMECOMPLETO` (`NOMECOMPLETO`),
+  ADD UNIQUE KEY `ID` (`ID`);
+
+--
+-- Indici per le tabelle `FOTO`
+--
+ALTER TABLE `FOTO`
+  ADD PRIMARY KEY (`ID`),
+  ADD UNIQUE KEY `NOME` (`NOME`),
+  ADD UNIQUE KEY `URL` (`URL`);
+
+--
+-- Indici per le tabelle `HH`
+--
+ALTER TABLE `HH`
+  ADD PRIMARY KEY (`ID`),
+  ADD UNIQUE KEY `NOME` (`NOME`),
+  ADD KEY `ID` (`ID`);
+
+--
+-- Indici per le tabelle `PERCORSO`
+--
+ALTER TABLE `PERCORSO`
+  ADD PRIMARY KEY (`ID`),
+  ADD UNIQUE KEY `SIGLA` (`SIGLA`),
+  ADD UNIQUE KEY `NOME` (`NOME`),
+  ADD KEY `ID` (`ID`);
+
+--
+-- Indici per le tabelle `PERCORSOANIMALE`
+--
+ALTER TABLE `PERCORSOANIMALE`
+  ADD PRIMARY KEY (`percorso`,`animale`),
+  ADD KEY `nome_ANIMALE` (`animale`);
+
+--
+-- Indici per le tabelle `PERCORSOCULTURA`
+--
+ALTER TABLE `PERCORSOCULTURA`
+  ADD PRIMARY KEY (`percorso`,`cultura`),
+  ADD KEY `nome_CULTURA` (`cultura`);
+
+--
+-- Indici per le tabelle `PERCORSOHH`
+--
+ALTER TABLE `PERCORSOHH`
+  ADD PRIMARY KEY (`percorso`,`hh`),
+  ADD KEY `nome_HH` (`hh`);
+
+--
+-- Indici per le tabelle `PERCORSOPIANTA`
+--
+ALTER TABLE `PERCORSOPIANTA`
+  ADD PRIMARY KEY (`percorso`,`pianta`);
+ALTER TABLE `PERCORSOPIANTA` ADD FULLTEXT KEY `pianta` (`pianta`);
+
+--
+-- Indici per le tabelle `PIANTA`
+--
+ALTER TABLE `PIANTA`
+  ADD PRIMARY KEY (`ID`),
+  ADD UNIQUE KEY `ID` (`ID`);
+
+--
+-- AUTO_INCREMENT per le tabelle scaricate
+--
+
+--
+-- AUTO_INCREMENT per la tabella `ANIMALE`
+--
+ALTER TABLE `ANIMALE`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+--
+-- AUTO_INCREMENT per la tabella `CULTURA`
+--
+ALTER TABLE `CULTURA`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+--
+-- AUTO_INCREMENT per la tabella `FOTO`
+--
+ALTER TABLE `FOTO`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+--
+-- AUTO_INCREMENT per la tabella `HH`
+--
+ALTER TABLE `HH`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id semplice', AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT per la tabella `PERCORSO`
+--
+ALTER TABLE `PERCORSO`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+--
+-- AUTO_INCREMENT per la tabella `PIANTA`
+--
+ALTER TABLE `PIANTA`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
