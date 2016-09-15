@@ -2,14 +2,14 @@ $( document ).ready(function() {
     $.ajax({
         type:'GET',
         dataType: 'json',
-        url: "http://localhost/HyperPark/php/cultura.php",
+        url: "http://localhost/HyperPark/php/estremi.php",
         crossDomain: true,
     }).success(function(result){
-        var prod = fauna(result);
-        $("#culturabody").html(prod);
+        var prod = estremi(result);
+        $("#estremibody").html(prod);
     });
     
-    function fauna(arg) {
+    function estremi(arg) {
         r='';
         count=0;
         arg.forEach(function (d) {
@@ -18,15 +18,15 @@ $( document ).ready(function() {
             }
         r += '<div class="col-md-4">';
         r += '<div class="thumbnail">';
-        if (d['NOME']=='S. Onofrio del Morrone') {
-            r += '<a href=luogo.html?id=8>';
+        if (d['NOME']=='Sentiero dello Spirito') {
+            r += '<a href=percorso.html?id=15>';
         }
         r += '<h3 class="nomeflora">'+d['NOME']+'</h3>';
         r += '<img class="img-responsive faunaimg" src="'+d['THUMBNAIL']+'">';
         r += '<div class="caption">';
         r += '<h5>' + d['DESCRIZIONEBREVE'] + '</h5>\n';
         r += '</div>';
-        if (d['NOME']=='S. Onofrio del Morrone') {
+        if (d['NOME']=='Sentiero dello Spirito') {
             r += '</a>';
         }
         r += '</div>';
@@ -39,4 +39,4 @@ $( document ).ready(function() {
      });
         return r;
     }
- });
+});

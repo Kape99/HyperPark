@@ -71,7 +71,7 @@ h1 .gallery{
 
 
 .faunaimg {
-   height: auto;
+   height: 200px;
    width: 300px;
 }
 
@@ -97,4 +97,9 @@ h1 .gallery{
 
 .titoloarancio {
    color: rgb(230,145,56);
+}
+
+.mappa {
+   width: 400px;
+   height: auto;
 }

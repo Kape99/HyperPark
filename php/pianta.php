@@ -1,5 +1,5 @@
 <?php
-     // 1. Create a database connection
+    // 1. Create a database connection
   $dbhost = "localhost";
   $dbuser = "root";
   $dbpass = "";
@@ -17,8 +17,8 @@
   
   $nome = $_GET['id'];
   $val="";
-  $query="SELECT * FROM CULTURA WHERE ID='".$nome."'";
-  $query1 = "SELECT NOME FROM CULTURA WHERE ID='".$nome."'";
+  $query="SELECT * FROM PIANTA WHERE ID='".$nome."'";
+  $query1 = "SELECT NOME FROM PIANTA WHERE ID='".$nome."'";
   
   
   //$result = $connection->query($query);
@@ -29,9 +29,9 @@
     $val= $result1->fetch_array(MYSQLI_ASSOC);
   }
   $string = implode($val);
-  $queryfoto = "SELECT * FROM FOTO WHERE TIPO='CULTURA'";
+  $queryfoto = "SELECT * FROM FOTO WHERE TIPO='PIANTA'";
 
-  $querypercorso ="SELECT percorso FROM PERCORSOCULTURA WHERE cultura='".$string."'";
+  $querypercorso ="SELECT percorso FROM PERCORSOPIANTA WHERE pianta='".$string."'";
   if ($result = $connection->query($query)) {
     if ($resultfoto = $connection->query($queryfoto)){
         if($resultpercorso = $connection->query($querypercorso)){
@@ -40,13 +40,13 @@
             $string2 = implode($stoca);
             $queriID = "SELECT ID FROM PERCORSO WHERE NOME='".$string2."'";
             if($resultID = $connection->query($queriID)){
-              $stica = $resultID->fetch_array(MYSQLI_ASSOC);
-              $ret = implode($stica);
-              while ($rf = $resultfoto->fetch_array(MYSQLI_ASSOC))
-              $row['FOTO'][] = $rf;
-              $row['PERCORSO']= $stoca;
-              $row['PERCORSOID']= $ret;
-              echo json_encode($row);
+                $stica = $resultID->fetch_array(MYSQLI_ASSOC);
+                $ret = implode($stica);
+                while ($rf = $resultfoto->fetch_array(MYSQLI_ASSOC))
+                $row['FOTO'][] = $rf;
+                $row['PERCORSO']= $stoca;
+                $row['PERCORSOID']= $ret;
+                echo json_encode($row);
             }
         }
     }
