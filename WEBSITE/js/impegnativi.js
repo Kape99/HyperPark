@@ -2,7 +2,7 @@ $( document ).ready(function() {
     $.ajax({
         type:'GET',
         dataType: 'json',
-        url: "http://localhost/HyperPark/php/impegnativi.php",
+        url: "http://parcomajella.altervista.org/php/impegnativi.php",
         crossDomain: true,
     }).success(function(result){
         var prod = impegnativi(result);

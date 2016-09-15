@@ -1,10 +1,10 @@
 <?php
 //$servername = "ftp.parcomajella.altervista.org";
 //$username = "parcomajella";
-$servername = "localhost";
-$username = "user";
-$password = capeculo0;
-$dbname = "my_parcomajella";
+$dbhost = "ftp.parcomajella.altervista.org";
+  $dbuser = "parcomajella";
+  $dbpass = "capeculo0";
+  $dbname = "my_parcomajella";
 
 // Create connection
 $mysqli = new mysqli($servername, 'root', 'root', $dbname);

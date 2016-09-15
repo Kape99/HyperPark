@@ -10,7 +10,7 @@ function getParameterByName(name, url) {
 
 $( document ).ready(function() {
     nome = getParameterByName('id');
-    url = "http://localhost/HyperPark/php/percorso.php?id="+nome;
+    url = "http://parcomajella.altervista.org/php/percorso.php?id="+nome;
 
     $.ajax({
         type:'GET',

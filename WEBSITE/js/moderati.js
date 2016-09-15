@@ -2,7 +2,7 @@ $( document ).ready(function() {
     $.ajax({
         type:'GET',
         dataType: 'json',
-        url: "http://localhost/HyperPark/php/moderati.php",
+        url: "http://parcomajella.altervista.org/php/moderati.php",
         crossDomain: true,
     }).success(function(result){
         var prod = moderati(result);

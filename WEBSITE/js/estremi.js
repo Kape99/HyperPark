@@ -2,7 +2,7 @@ $( document ).ready(function() {
     $.ajax({
         type:'GET',
         dataType: 'json',
-        url: "http://localhost/HyperPark/php/estremi.php",
+        url: "http://parcomajella.altervista.org/php/estremi.php",
         crossDomain: true,
     }).success(function(result){
         var prod = estremi(result);
