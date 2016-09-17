@@ -1,8 +1,8 @@
 <?php
    // 1. Create a database connection
-  $dbhost = "ftp.parcomajella.altervista.org";
-  $dbuser = "parcomajella";
-  $dbpass = "capeculo0";
+  $dbhost = "localhost";
+  $dbuser = "root";
+  $dbpass = "root";
   $dbname = "my_parcomajella";
   $connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
   $connection->set_charset("utf8");
@@ -25,10 +25,10 @@
   if ($result = $connection->query($query)) {
     if ($resultfoto = $connection->query($queryfoto)){
         if($resultpercorso = $connection->query($querypercorso)){
-            $row = $result->fetch_array(MYSQLI_ASSOC);
-            while ($rf = $resultfoto->fetch_array(MYSQLI_ASSOC))
+            $row = $result->fetch_array(MYSQLI_BOTH);
+            while ($rf = $resultfoto->fetch_array(MYSQLI_BOTH))
             $row['FOTO'][] = $rf;
-            $row['PERCORSO']= $resultpercorso->fetch_array(MYSQLI_ASSOC);
+            $row['PERCORSO']= $resultpercorso->fetch_array(MYSQLI_BOTH);
             echo json_encode($row);
         }
     }

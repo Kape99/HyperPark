@@ -33,6 +33,10 @@ h1 .gallery{
 }
 .bianco { color: #FFF; }
 
+h2grigrio {
+	color:#FFF;
+}
+
 .arancione{
     background-color: #e69138;
     color: #FFF;
@@ -59,10 +63,15 @@ h1 .gallery{
 
 .grigio {
     opacity: 0.8;
-    background-color: #555;
+    background-color: #AAA;
    margin: 3px;
    padding: 3px ;
 }
+
+.grigio2 {
+    background-color: rgba(0, 0, 0, 0.145);
+    }
+
 
 .grigio p {
    color: #FFF;

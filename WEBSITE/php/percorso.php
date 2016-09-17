@@ -1,8 +1,8 @@
 <?php
    // 1. Create a database connection
-  $dbhost = "ftp.parcomajella.altervista.org";
-  $dbuser = "parcomajella";
-  $dbpass = "capeculo0";
+  $dbhost = "localhost";
+  $dbuser = "root";
+  $dbpass = "root";
   $dbname = "my_parcomajella";
   $connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
   $connection->set_charset("utf8");

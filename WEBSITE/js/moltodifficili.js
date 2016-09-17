@@ -2,7 +2,7 @@ $( document ).ready(function() {
     $.ajax({
         type:'GET',
         dataType: 'json',
-        url: "http://parcomajella.altervista.org/php/moltodifficili.php",
+        url: "/php/moltodifficili.php",
         crossDomain: true,
     }).success(function(result){
         var prod = moltodifficili(result);

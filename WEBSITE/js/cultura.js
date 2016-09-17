@@ -2,7 +2,7 @@ $( document ).ready(function() {
     $.ajax({
         type:'GET',
         dataType: 'json',
-        url: "http://parcomajella.altervista.org/php/cultura.php",
+        url: "/php/cultura.php",
         crossDomain: true,
     }).success(function(result){
         var prod = fauna(result);
