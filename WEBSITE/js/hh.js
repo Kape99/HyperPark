@@ -15,22 +15,21 @@ $(document).ready(function () {
       r = '';
       count = 0;
       arg.forEach(function (d) {
-         if (count % 2 != 0) {
+         if (count % 2 == 0) {
 
-            r += '<div class="row grigio2" style="padding:20px">';
+            r += '<div class="row" ><div class="col-md-12"><a class="thumbnail special" href=hotel.html?id=' + d['ID']+ '>';
          } else {
-            r += '<div class="row" style="padding:20px">';
+            r += '<div class="row" ><div class="col-md-12"><a class="thumbnail" href=hotel.html?id=' + d['ID']+ '>';
          }
-
-
-
+         r += '<div class="row" >';
          r += '<div class = "col-md-8">';
-         r += '<h2 class = "titolo"> ' + d['NOME'] + ' </h2>';
-
-         r += '<p> ' + d['DESCRIZIONEBREVE'] + ' </p> </div> <div class = "col-sm-4">';
+         r += '<h3 class = "sottotitolo "> ' + d['NOME'] + ' </h2>';
+         r += '<p class = "descrizionebreve"> ' + d['DESCRIZIONEBREVE'] + ' </p> </div> <div class = "col-sm-4">';
          r += '<img class = "img-responsive mappa" src = "' + d['THUMBNAIL'] + '" >';
          r += '</div>';
-
+         r += '</div>';
+         r += '</a>';
+         r += '</div>';
          r += '</div>';
          count++
       });

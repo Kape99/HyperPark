@@ -8,7 +8,7 @@ $( document ).ready(function() {
         var prod = fauna(result);
         $("#faunabody").html(prod);
     });
-    
+
     function fauna(arg) {
         r='';
         count=0;

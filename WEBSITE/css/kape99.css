@@ -1,18 +1,15 @@
 
-.test{
-    position: relative;
-}
-.test2{
-    position: absolute;
-    top:35%;
-    left:40%
-}
+
 .thumbnail{
     text-align: center;
     background-color:  #bbbbbb;
     height: auto;
     width: 100%;
     background-size: 100% 100%;
+}
+
+a.special{background-color: #ffffff;
+  text-decoration-color: #000000;
 }
 
 #head {
@@ -39,7 +36,11 @@ h2.titolo{
 h3.sottotitolo{
     font-weight: bold;
     color: #ff6d00;
-    text-decoration-color: #ff6d00;
+
+}
+
+p.descrizionebreve{
+  color: black;
 }
 
 

@@ -21,7 +21,7 @@ $( document ).ready(function() {
         var prod = luogo(result);
         $("#percorsobody").html(prod);
     });
-    
+
     function luogo(d) {
         var r='';
         r += '<h2>'+d['NOME']+'</h2>';
@@ -36,9 +36,9 @@ $( document ).ready(function() {
         r += '<p><b>Tempo di percorrenza: </b>'+d['DURATA']+'</p>';
         r += '</div>';
         r += '</div>';
-        return r; 
+        return r;
     }
-    
+
     $(function(){
     $('#bottoneinfo').on('click', function(result){
         var prod = info(result);
@@ -56,5 +56,5 @@ $( document ).ready(function() {
         r += '<div class="col-md-6">';
         r += '<img class="img-responsive src="'+d['THUMBNAIL']+'">"';
     }
-    
+
 });
