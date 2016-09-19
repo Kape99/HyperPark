@@ -24,8 +24,8 @@ $(document).ready(function () {
          r += '<div class="row" >';
          r += '<div class = "col-md-8">';
          r += '<h3 class = "sottotitolo "> ' + d['NOME'] + ' </h2>';
-         r += '<p class = "descrizionebreve"> ' + d['DESCRIZIONEBREVE'] + ' </p> </div> <div class = "col-sm-4">';
-         r += '<img class = "img-responsive mappa" src = "' + d['THUMBNAIL'] + '" >';
+         r += '<div class = "descrizionebreve"> ' + d['DESCRIZIONEBREVE'] + ' </div> </div> <div class = "col-sm-4">';
+         r += '<center> <img class = "img-responsive mappa" src = "' + d['THUMBNAIL'] + '" ><center>';
          r += '</div>';
          r += '</div>';
          r += '</a>';

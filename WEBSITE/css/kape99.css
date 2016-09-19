@@ -39,11 +39,16 @@ h3.sottotitolo{
 
 }
 
-p.descrizionebreve{
+.descrizionebreve > a:hover{
   color: black;
-}
+  text-decoration:none;
+  }
 
 
+.descrizionebreve {
+  color: black;
+  text-decoration:none;
+  }
 
 
 
