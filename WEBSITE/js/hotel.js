@@ -19,32 +19,34 @@ $(document).ready(function () {
       url: url,
       crossDomain: true,
    }).success(function (result) {
+      var nameToDisplay = name(result);
       var tofill1 = tab1(result);
       var tofill2 = tab2(result);
-      var tofill3 = tab3(result);
       var tofill4 = tab4(result);
+
+      $("#nametofill").html(nameToDisplay);
       $("#tab1tofill").html(tofill1);
       $("#tab2tofill").html(tofill2);
-      $("#tab3tofill").html(tofill3);
       $("#tab4tofill").html(tofill4);
    });
 
 
 });
 
+function name(d) {
+   return d['NOME'];
+}
+
 function tab1(d) {
    var r = '';
-   
    r += '<div class="container-fluid">';
    r += '<div class="row style=" width:95%;"">';
    r += '<div class="col-sm-8">';
-   r += '<h2>' + d['NOME'] + '</h2>';
-   r += '<p>' + d['DESCRIZIONE'] + '</p>';
+   r += '<p><br>' + d['DESCRIZIONE'] + '</p>';
    r += '</div>';
    r += '<div class="col-sm-4">';
    r += '<img class="img-responsive" src="' + d['THUMBNAIL'] + '"';
    r += '</div>';
-   
    r += '</div>';
    r += '</div>';
    return r;
@@ -53,16 +55,24 @@ function tab1(d) {
 
 
 function tab2(d) {
-   return 'acdcewcweccccs fdwawvdx';
+   var r = '';
+   r += '<div class="container-fluid">';
+   r += '<div class="row style=" width:95%;"">';
+   r += '<div class="col-sm-8">';
 
+   r += '<p><br>' + d['LUOGO'] + '</p>';
+   r += '</div>';
+   r += '<div class="col-md-4">';
+   r += '<img class="img-responsive" src="' + d['IMMAGINELUOGO'] + '"';
+   r += '</div>';
+   r += '</div>';
+   r += '</div>';
+   return r;
 }
 
-function tab3(d) {
-   return 'ksksks';
 
-}
 
 function tab4(d) {
-   return 0;
+   return '<div class="container" style="width:90%">' + d['DESCRIZIONE'] + '</div>';
 
 }

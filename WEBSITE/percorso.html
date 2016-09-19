@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
 
    <meta charset="utf-8">
@@ -8,7 +9,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta name="description" content="our first dynamic website">
    <meta name="author" content="Capecchi Luca, Chioso Emanuele, Della Penna Lorenzo">
-   
+
    <title>Parco la Majella</title>
 
    <!-- Bootstrap -->
@@ -16,37 +17,78 @@
    <!-- Custom CSS -->
    <link href="css/park.css" rel="stylesheet">
    <link rel="stylesheet" href="css/kape99.css" media="screen" title="no title" charset="utf-8">
-   
+
 </head>
 
 <body>
-    
-    <!--   HEADER   -->
-   <header></header>
-   <!-- HEADER END -->
-   
    <div class="container">
-    <div id="navigation">
-        <ul class="nav nav-tabs">
-            <li role="presentation" class="active"><a id="bottoneinfo" href="#">Info Tecniche</a></li>
-            <li role="presentation"><a id="bottonedescr" href="#">Descrizione Itinerario</a></li>
-            <li role="presentation"><a id="bottonefoto" href="#">Fotogallery</a></li>
-        </ul>
-    </div>
-    <div id="percorsobody"></div>
+      <!--   HEADER   -->
+      <header></header>
+      <!-- HEADER END -->
+
+      <div class="container">
+
+         <div id="percorsobody"></div>
+
+
+
+         <div class="container-fluid">
+            <div class="row top-buffer right-minibuffer bottom-buffer">
+               <div class="container">
+                  <div class="row">
+                     <h2 id="nametofill"></h2></div>
+               </div>
+
+               <div class="container" style=" width:98%;">
+                  <ul class="nav nav-tabs responsive">
+                     <li class="active"><a data-toggle="tab" href="#home"> Info Tecniche </a></li>
+                     <li><a data-toggle="tab" href="#menu1">Descrizione Itinerario</a></li>
+                     <li><a data-toggle="tab" href="#menu2">Fotogallery</a></li>
+                  </ul>
+                  <div class="tab-content">
+                     <div id="home" class="tab-pane fade in active">
+                        <div id="tab1tofill"></div>
+                     </div>
+                     <div id="menu1" class="tab-pane fade">
+                        <div id="tab2tofill"></div>
+                     </div>
+                     <div id="menu2" class="tab-pane fade">
+                        <div id="tab3tofill"></div>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+
+      </div>
+
+
+
+
+
+
+      <dl class="dl-horizontal">
+         <dt>..vvvv.</dt>
+         <dd>..aaaa.</dd>
+         <dt>..vvvv.</dt>
+         <dd>..aaaa.</dd>
+         <dt>..vvvv.</dt>
+         <dd>..aaaa.</dd>
+      </dl>
+
+
+      <!--   FOOTER   -->
+      <footer> </footer>
+      <!-- FOOTER END -->
    </div>
-   
-   
-   <!--   FOOTER   -->
-   <footer> </footer>
-   <!-- FOOTER END -->
-   
    <!-- jQuery  -->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
    <!-- bootstrap standard javascript -->
-   <script src="js/bootstrap.min.js"></script>
+   <script src="js/bootstrap.js"></script>
    <!-- our scripts -->
    <script src="js/park.js"></script>
    <script language="JavaScript" type="text/javascript" src="js/percorso.js"></script>
 </body>
+
 </html>

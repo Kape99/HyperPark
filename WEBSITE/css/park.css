@@ -8,6 +8,10 @@ body {
     text-decoration: underline;
 }
 
+.right-minibuffer { margin-right:5px; }
+
+.top-buffer { margin-top:20px; }
+.bottom-buffer { margin-bottom:20px; }
 
 .navbar {
     margin-bottom: 0px;
@@ -35,6 +39,10 @@ h1 .gallery{
 
 h2grigrio {
 	color:#FFF;
+}
+
+.nopaddingbottom {
+	padding-bottom:3px;
 }
 
 .arancione{
