@@ -14,20 +14,14 @@
     );
   }
   
-  $query="SELECT * FROM ANIMALE";
-  //$result = $connection->query($query);
-  //var_dump($result);
-  // 3. Use returned data (if any)
-  $myArray = array();
+  $id = $_GET['id'];
+  
+  $query="SELECT * FROM HH WHERE ID='".$id."'";
   if ($result = $connection->query($query)) {
-
-    while($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
-            $myArray[] = $row;
-    }
-    echo json_encode($myArray);
-   
+    $row = $result->fetch_array(MYSQLI_ASSOC);
+    echo json_encode($row);
   }
-
+  
   // 5. Close database connection
   mysqli_close($connection);
 ?>
