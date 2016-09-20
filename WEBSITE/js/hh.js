@@ -17,10 +17,14 @@ $(document).ready(function () {
       arg.forEach(function (d) {
          if (count % 2 == 0) {
 
-            r += '<a class="thumbnail special" style="padding-bottom:3px;" href=hotel.html?id=' + d['ID']+ '>';
+            r += '<a class="thumbnail special" style="padding-bottom:3px;"';
          } else {
-            r += '<a class="thumbnail" style="padding-bottom:3px;" href=hotel.html?id=' + d['ID']+ '>';
+            r += '<a class="thumbnail" style="padding-bottom:3px;" ';
          }
+         if( count < 2){
+            r+= 'href=hotel.html?id=' + d['ID']+'';
+         }
+         r+= '>';
          r += '<div class="row" >';
          r += '<div class = "col-sm-8">';
          r += '<h3 class = "sottotitolo "> ' + d['NOME'] + ' </h2>';

@@ -10,8 +10,8 @@ function getParameterByName(name, url) {
 
 $(document).ready(function () {
    fakewaffle.responsiveTabs(['xs', 'sm']);
-   nome = getParameterByName('id');
-   url = "/php/hotel.php?id=" + nome;
+   id = getParameterByName('id');
+   url = "/php/idfrom.php?id=" + id+"&from=HH";
 
    $.ajax({
       type: 'GET',
@@ -60,7 +60,7 @@ function tab2(d) {
    r += '<div class="row style=" width:95%;"">';
    r += '<div class="col-sm-8">';
 
-   r += '<p><br>' + d['LUOGO'] + '</p>';
+   r += '<h4><p><br>' + d['LUOGO'] + '</p></h4>';
    r += '</div>';
    r += '<div class="col-md-4">';
    r += '<img class="img-responsive" src="' + d['IMMAGINELUOGO'] + '"';
