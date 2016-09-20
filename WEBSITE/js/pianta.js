@@ -20,9 +20,11 @@ $( document ).ready(function() {
     }).success(function(result){
         var prod = pianta(result);
         $("#piantabody").html(prod);
+        createBreadcrumb(result,'pianta');
     });
     
     function pianta(d) {
+       
         var r='';
         var cont=0;
         r += '<h2>'+d['NOME']+'</h2>';
