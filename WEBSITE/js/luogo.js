@@ -20,6 +20,7 @@ $( document ).ready(function() {
     }).success(function(result){
         var prod = luogo(result);
         $("#luogobody").html(prod);
+        createBreadcrumb(result,'luogo');
     });
     
     function luogo(d) {

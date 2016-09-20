@@ -7,6 +7,7 @@ $( document ).ready(function() {
     }).success(function(result){
         var prod = fauna(result);
         $("#culturabody").html(prod);
+        createBreadcrumb(result,'cultura');
     });
     
     function fauna(arg) {

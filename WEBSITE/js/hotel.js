@@ -28,6 +28,8 @@ $(document).ready(function () {
       $("#tab1tofill").html(tofill1);
       $("#tab2tofill").html(tofill2);
       $("#tab4tofill").html(tofill4);
+      createBreadcrumb(result,'hotel');
+      
    });
 
 

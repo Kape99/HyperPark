@@ -25,6 +25,8 @@ $(document).ready(function () {
       $("#nametofill").html(nameToDisplay);
       $("#tab1tofill").html(tofill1);
       $("#tab2tofill").html(tofill2);
+      createBreadcrumb(result,'percorso');
+      
    });
 
 
@@ -53,7 +55,7 @@ function tab1(d) {
    r += '<p><b>Località di inizio: </b>' + d['INIZIO'] + '</p>';
    r += '<p><b>Località di inizio: </b>' + d['INIZIO'] + '</p>';
    r += '<p><b>Località di arrivo: </b>' + d['FINE'] + '</p>';
-   r += '<p> <b>Difficoltà: </b>' + d['DIFFICOLTA'] + '</p>';
+   r += '<p> <b>Difficoltà: </b>' + d['diff'] + '</p>';
    r += '<p><b>Dislivello: </b>' + d['DISLIVELLO'] + '</p>';
    r += '<p><b>Lunghezza: </b>' + d['LUNGHEZZA'] + '</p>';
    r += '<p><b>Tempo di percorrenza: </b>' + d['DURATA'] + '</p>';

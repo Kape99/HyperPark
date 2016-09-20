@@ -2,13 +2,14 @@ $( document ).ready(function() {
     $.ajax({
         type:'GET',
         dataType: 'json',
-        url: "../php/fauna.php",
+        url: "/php/fauna.php",
         crossDomain: true,
     }).success(function(result){
         var prod = fauna(result);
         $("#faunabody").html(prod);
+        createBreadcrumb(result,'fauna');
     });
-
+    
     function fauna(arg) {
         r='';
         count=0;

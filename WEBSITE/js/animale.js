@@ -1,4 +1,3 @@
-
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
@@ -11,7 +10,7 @@ function getParameterByName(name, url) {
 
 $( document ).ready(function() {
     nome = getParameterByName('nome');
-    url = "/php/animale.php?nome="+nome;
+    url = "http://parcomajella.altervista.org/php/animale.php?nome="+nome;
 
     $.ajax({
         type:'GET',
@@ -21,6 +20,8 @@ $( document ).ready(function() {
     }).success(function(result){
         var prod = animale(result);
         $("#animalebody").html(prod);
+        createBreadcrumb(result,'animale');
+       
     });
     
     function animale(d) {

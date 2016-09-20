@@ -7,6 +7,7 @@ $( document ).ready(function() {
     }).success(function(result){
         var prod = flora(result);
         $("#florabody").html(prod);
+        createBreadcrumb(result,'flora');
     });
     
     function flora(arg) {

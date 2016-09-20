@@ -100,6 +100,18 @@ h2grigrio {
    height: 500px;
 }
 
+.topbuffer{
+	padding-top:20px;
+}
+.bottombuffer{
+	padding-bottom:20px;
+}
+.rightbuffer{
+	padding-right:20px;
+}
+.rightminibuffer{
+	padding-right:5px;
+}
 .nomeflora{
    color: rgb(230,145,56);
   text-align: center;

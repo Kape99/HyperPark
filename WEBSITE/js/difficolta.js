@@ -20,6 +20,7 @@ $( document ).ready(function() {
     }).success(function(result){
         var prod = luogo(result);
         $("#difficoltabody").html(prod);
+        createBreadcrumb(result,'diff');
     });
 
     function luogo(arg) {
