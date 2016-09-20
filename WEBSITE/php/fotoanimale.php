@@ -20,10 +20,11 @@
   //$result = $connection->query($query);
   //var_dump($result);
   // 3. Use returned data (if any)
+
   $myArray = array();
   if ($result = $connection->query($query)) {
 
-    while($row = $result->fetch_array(MYSQL_ASSOC)) {
+    while($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
             $myArray[] = $row;
     }
     echo json_encode($myArray);

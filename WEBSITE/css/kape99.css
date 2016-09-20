@@ -1,18 +1,27 @@
 
-.test{
-    position: relative;
-}
-.test2{
-    position: absolute;
-    top:35%;
-    left:40%
-}
+
 .thumbnail{
     text-align: center;
-    background-color:  #bbbbbb;
+    background-color:  #cccccc;
     height: auto;
     width: 100%;
     background-size: 100% 100%;
+
+}
+
+a.thumbnail:hover{
+  transition: 1s;
+  background-color: #bbbbbb;
+}
+
+a.special{
+  background-color: #ffffff;
+  text-decoration-color: #000000;
+}
+
+a.special:hover{
+  transition: 1s;
+  background-color: #eeeeee ;
 }
 
 #head {
@@ -21,13 +30,15 @@
     background-size:100% 100%;
 }
 
- img.thumb{
-   opacity:0.65;
+
+
+img.thumb{
+   opacity:0.75;
    height: 200px;
  }
 
- img.thumb:hover {
-   transition: 2s;
+ a:hover > img.thumb  {
+   transition: 1s;
    opacity: 1;
  }
 
@@ -42,7 +53,16 @@ h3.sottotitolo{
     text-decoration-color: #ff6d00;
 }
 
+.descrizionebreve > a:hover{
+  color: black;
+  text-decoration:none;
+}
 
+
+.descrizionebreve {
+  color: black;
+  text-decoration:none;
+}
 
 
 
@@ -81,14 +101,26 @@ h3.sottotitolo{
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-menu a:hover {background-color: #f1f1f1}
+.dropdown-menu a:hover {background-color: #eeeeee}
+
+
+
+
+
+@media screen and (min-width: 768px) and (max-width: 2048px) {
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-menu {
     display: block;
 }
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-    background-color: #91ac92;
+.bianco-md{
+  color: white;
+}
+
+
+
+
+
+
 }

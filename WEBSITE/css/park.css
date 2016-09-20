@@ -4,7 +4,11 @@ body {
    font-family: 'Open Sans', sans-serif; font-size: 14px; font-weight: 300; color: #555; margin: 0; padding: 0;padding-top: 20px; /*Required padding for .navbar-fixed-top. Change if height of navigation changes. */
 }
 
-.cliccabile {
+.cliccabile{
+  color: white;
+}
+
+.cliccabile:hover {
     text-decoration: underline;
 }
 
@@ -29,18 +33,30 @@ h1 .gallery{
 
 
 #intro {
-   padding:50px 0 50px 0;
+   padding:25px 0 25px 0;
 }
 .bianco { color: #FFF; }
 
+h2grigrio {
+	color:#FFF;
+}
+
 .arancione{
-    background-color: #e69138;
+    background-color: #ff6d00;
     color: #FFF;
 }
 
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
   #logos { display: none; }  /* show it on small screens */
+
+  .bianco-md{
+    color: white;
+  }
+
+  .bianco-md:hover{
+    text-decoration: underline;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 2048px) {
@@ -59,10 +75,15 @@ h1 .gallery{
 
 .grigio {
     opacity: 0.8;
-    background-color: #555;
+    background-color: #AAA;
    margin: 3px;
    padding: 3px ;
 }
+
+.grigio2 {
+    background-color: rgba(0, 0, 0, 0.145);
+    }
+
 
 .grigio p {
    color: #FFF;
@@ -79,20 +100,33 @@ h1 .gallery{
    height: 500px;
 }
 
+.topbuffer{
+	padding-top:20px;
+}
+.bottombuffer{
+	padding-bottom:20px;
+}
+.rightbuffer{
+	padding-right:20px;
+}
+.rightminibuffer{
+	padding-right:5px;
+}
 .nomeflora{
    color: rgb(230,145,56);
   text-align: center;
 }
-
+/*
 .thumbnail {
    background-color: rgb(238,238,238);
    padding-bottom: 25px;
 }
+*/
 
 .imganimale {
    height: 200px;
    width: 300px;
-   padding-top: 20px; 
+   padding-top: 20px;
 }
 
 .titoloarancio {

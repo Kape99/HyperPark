@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="our first dynamic website">
+   <meta name="author" content="Capecchi Luca, Chioso Emanuele, Della Penna Lorenzo">
+   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+   <title>Parco la Majella</title>
+
+   <!-- Bootstrap -->
+   <link href="css/bootstrap.css" rel="stylesheet">
+   <!-- Custom CSS -->
+   <link href="css/park.css" rel="stylesheet">
+   <link rel="stylesheet" href="css/kape99.css" media="screen" title="no title" charset="utf-8">
+
+
+</head>
+
+
+<body>
+
+   <div class="container">
+
+      <!--   HEADER   -->
+      <header></header>
+      <!-- HEADER END -->
+
+      <ol class="breadcrumb" id="bc">Indicazioni in treno, auto, aereo</ol>
+   </div>
+
+
+
+   <!-- BODY -->
+   <div class="container">
+      <div id="intro" class="container-fluid">
+
+         <div class="row">
+            <div class="col-md-12">
+               <h2 class="titolo">Come Raggiungerci</h2>
+                 <div id="map" style="width:100%;height:400px ;background:white"></div>
+               <script>
+                 var map;
+                 function initMap() {
+                   map = new google.maps.Map(document.getElementById('map'), {
+                     center: {lat: 42.1132677, lng: 14.053676},
+                     zoom: 12
+                   });
+                   var marker = new google.maps.Marker({
+                   position: {lat: 42.1132677, lng: 14.053676},
+                   map: map,
+                   title: 'Parco Della Majella'
+                 });
+               }
+               </script>
+
+
+           </div>
+        </div>
+
+   </div>
+   <div class="jumbotron jumbotron-fluid">
+     <div class="container">
+      <div id="present" class="row">
+         <div id="aereo" class="col-md-4">
+            <img src="img/aereo.jpg" class="img-responsive width" alt="Responsive image">
+            <h3 class="sottotitolo">In Aereo</h2>
+               <p>In aereo al Parco Nazionale della Majella ci si arriva atterrando all’Aeroporto Internazionale D’Abruzzo, a Pescara, è presto detto e non ci sono molte scorciatoie da prendere.</p>
+               <a id="moreinfo" class="btn btn-default arancione" href="#">More Info</a>
+            </div>
+            <div id="macchina" class="col-md-4">
+               <img src="img/macchina.jpg" class="img-responsive" alt="Responsive image">
+               <h3 class="sottotitolo">In Macchina</h2>
+            <p>In auto, partendo da Roma si può prendere la A24 Roma-L'Aquila e la A25 Torano-Pescara, uscire a Pratola Peligna, Bussi, Torre de’ Passeri, Alanno-Scafa e proseguire verso i paesi del massiccio con le strade statali 17, 487, 614, 81, 84.</p>
+            <a id="moreinfo" class="btn btn-default arancione" href="#">More Info</a>
+         </div>
+         <div id="treno" class="col-md-4">
+            <img src="img/treno.jpg" class="img-responsive" alt="Responsive image">
+            <h3 class="sottotitolo">In Treno</h2>
+            <p>In treno si può utilizzare la linea ferroviaria Roma-Sulmona-Pescara oppure, in aggiunta, la locale Sulmona-Carpinone-Isernia.</p>
+            <a id="moreinfo" class="btn btn-default arancione" href="#">More Info</a>
+         </div>
+      </div>
+   </div>
+
+ </div>
+
+
+
+    </div>
+   <!--   FOOTER   -->
+   <footer> </footer>
+   <!-- FOOTER END -->
+
+
+   <!-- jQuery  -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <!-- bootstrap standard javascript -->
+   <script src="js/bootstrap.js"></script>
+   <!-- our scripts -->
+   <script src="js/park.js"></script>
+
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUr9XXKs_jW3t2cR3cC_XXRt3cCmVb_tw&callback=initMap"
+   async defer></script>
+
+</body>
+
+</html>

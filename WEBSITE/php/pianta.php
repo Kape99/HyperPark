@@ -1,8 +1,8 @@
 <?php
-    // 1. Create a database connection
-  $dbhost = "ftp.parcomajella.altervista.org";
-  $dbuser = "parcomajella";
-  $dbpass = "capeculo0";
+   // 1. Create a database connection
+  $dbhost = "localhost";
+  $dbuser = "root";
+  $dbpass = "root";
   $dbname = "my_parcomajella";
   $connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
   $connection->set_charset("utf8");
@@ -35,7 +35,7 @@
   if ($result = $connection->query($query)) {
     if ($resultfoto = $connection->query($queryfoto)){
         if($resultpercorso = $connection->query($querypercorso)){
-            $row = $result->fetch_array(MYSQLI_ASSOC);
+            $row = $result->fetch_array(MYSQLI_BOTH);
             $stoca = $resultpercorso->fetch_row();
             $string2 = implode($stoca);
             $queriID = "SELECT ID FROM PERCORSO WHERE NOME='".$string2."'";

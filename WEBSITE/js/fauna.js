@@ -2,13 +2,14 @@ $( document ).ready(function() {
     $.ajax({
         type:'GET',
         dataType: 'json',
-        url: "http://parcomajella.altervista.org/php/fauna.php",
+        url: "/php/fauna.php",
         crossDomain: true,
     }).success(function(result){
         var prod = fauna(result);
         $("#faunabody").html(prod);
+        createBreadcrumb(result,'fauna');
     });
-    
+
     function fauna(arg) {
         r='';
         count=0;
@@ -19,7 +20,7 @@ $( document ).ready(function() {
         r += '<div class="col-md-4">';
         r += '<div class="thumbnail">';
         if (d['NOME']=='Coturnice') {
-            r += '<a href=animale.html?nome=Coturnice>';
+            r += '<a href="animale.html?id=5">';
         }
         r += '<h3 class="nomeflora">'+d['NOME']+'</h3>';
         r += '<img class="img-responsive faunaimg" src="'+d['THUMBNAIL']+'">';

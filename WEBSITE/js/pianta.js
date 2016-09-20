@@ -10,7 +10,7 @@ function getParameterByName(name, url) {
 
 $( document ).ready(function() {
     nome = getParameterByName('id');
-    url = "http://parcomajella.altervista.org/php/pianta.php?id="+nome;
+    url = "/php/pianta.php?id="+nome;
 
     $.ajax({
         type:'GET',
@@ -20,9 +20,11 @@ $( document ).ready(function() {
     }).success(function(result){
         var prod = pianta(result);
         $("#piantabody").html(prod);
+        createBreadcrumb(result,'pianta');
     });
     
     function pianta(d) {
+       
         var r='';
         var cont=0;
         r += '<h2>'+d['NOME']+'</h2>';

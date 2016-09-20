@@ -2,11 +2,12 @@ $( document ).ready(function() {
     $.ajax({
         type:'GET',
         dataType: 'json',
-        url: "http://parcomajella.altervista.org/php/flora.php",
+        url: "/php/flora.php",
         crossDomain: true,
     }).success(function(result){
         var prod = flora(result);
         $("#florabody").html(prod);
+        createBreadcrumb(result,'flora');
     });
     
     function flora(arg) {

@@ -1,8 +1,8 @@
 <?php
    // 1. Create a database connection
-  $dbhost = "ftp.parcomajella.altervista.org";
-  $dbuser = "parcomajella";
-  $dbpass = "capeculo0";
+  $dbhost = "localhost";
+  $dbuser = "root";
+  $dbpass = "root";
   $dbname = "my_parcomajella";
   $connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
   $connection->set_charset("utf8");
@@ -18,14 +18,18 @@
   //$result = $connection->query($query);
   //var_dump($result);
   // 3. Use returned data (if any)
+
+
+
   $myArray = array();
   if ($result = $connection->query($query)) {
 
-    while($row = $result->fetch_array(MYSQL_ASSOC)) {
+    while($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
             $myArray[] = $row;
     }
     echo json_encode($myArray);
   }
+
 
   // 5. Close database connection
   mysqli_close($connection);
