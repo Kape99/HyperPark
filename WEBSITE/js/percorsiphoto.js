@@ -11,7 +11,7 @@ function getParameterByName(name, url) {
 $(document).ready(function () {
    equalHeight($(".stessaaltezza"));
    id = getParameterByName('id');
-   url = "/php/photo.php?id=" + id + "&tipo=HH";
+   url = "/php/photo.php?id=" + id + "&tipo=PERCORSO";
 
    $.ajax({
       type: 'GET',
@@ -44,9 +44,9 @@ $(document).ready(function () {
       count = 1;
       arg.forEach(function (d) {
          
-         r += '<div class="col-lg-4 col-md-4 col-xs-6 ">';
-         r += '<a class="thumbnail" href="#">';
-         r += '<img class="img-responsive" src="' + d['URL'] + '" alt="">';
+         r += '<div class="col-lg-4 col-md-6 col-xs-6 ">';
+         r += '<a class="thumbnail special" style="border-color:white;" href="#">';
+         r += '<img class="img-responsive" style="max-height: 13.5em;" src="' + d['URL'] + '" alt="">';
          r += '</a>';
          r += '</div>';
       });
