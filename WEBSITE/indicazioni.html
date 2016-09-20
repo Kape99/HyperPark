@@ -30,44 +30,51 @@
       <!-- HEADER END -->
 
       <ol class="breadcrumb" id="bc">Indicazioni in treno, auto, aereo</ol>
-   </div>
 
 
 
-   <!-- BODY -->
-   <div class="container">
+
+      <!-- BODY -->
       <div id="intro" class="container-fluid">
 
          <div class="row">
             <div class="col-md-12">
                <h2 class="titolo">Come Raggiungerci</h2>
-                 <div id="map" style="width:100%;height:400px ;background:white"></div>
+               <br>
+               <div id="map" style="width:100%;height:400px ;background:white"></div>
                <script>
-                 var map;
-                 function initMap() {
-                   map = new google.maps.Map(document.getElementById('map'), {
-                     center: {lat: 42.1132677, lng: 14.053676},
-                     zoom: 12
-                   });
-                   var marker = new google.maps.Marker({
-                   position: {lat: 42.1132677, lng: 14.053676},
-                   map: map,
-                   title: 'Parco Della Majella'
-                 });
-               }
+                  var map;
+
+                  function initMap() {
+                     map = new google.maps.Map(document.getElementById('map'), {
+                        center: {
+                           lat: 42.1132677,
+                           lng: 14.053676
+                        },
+                        zoom: 12
+                     });
+                     var marker = new google.maps.Marker({
+                        position: {
+                           lat: 42.1132677,
+                           lng: 14.053676
+                        },
+                        map: map,
+                        title: 'Parco Della Majella'
+                     });
+                  }
                </script>
 
 
-           </div>
-        </div>
+            </div>
+         </div>
 
-   </div>
-   <div class="jumbotron jumbotron-fluid">
-     <div class="container">
-      <div id="present" class="row">
-         <div id="aereo" class="col-md-4">
-            <img src="img/aereo.jpg" class="img-responsive width" alt="Responsive image">
-            <h3 class="sottotitolo">In Aereo</h2>
+      </div>
+      <div class="jumbotron jumbotron-fluid">
+         <div class="container">
+            <div id="present" class="row">
+               <div id="aereo" class="col-md-4">
+                  <img src="img/aereo.jpg" class="img-responsive width" alt="Responsive image">
+                  <h3 class="sottotitolo">In Aereo</h2>
                <p>In aereo al Parco Nazionale della Majella ci si arriva atterrando all’Aeroporto Internazionale D’Abruzzo, a Pescara, è presto detto e non ci sono molte scorciatoie da prendere.</p>
                <a id="moreinfo" class="btn btn-default arancione" href="#">More Info</a>
             </div>

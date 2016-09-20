@@ -12,7 +12,7 @@ function getParameterByName(name, url) {
 $(document).ready(function () {
 
    id = getParameterByName('id');
-   url = "/php/percorsohh.php?id="+id;
+   url = "http://parcomajella.altervista.org/php/percorsohh.php?id="+id;
 
    $.ajax({
       type: 'GET',
@@ -28,7 +28,7 @@ $(document).ready(function () {
 
    function tab(arg) {
       var r = '';
-      r +="<div class='container container-fluid' style='padding-bottom: 30px'>";
+      r +="";
 
       r += '<h3 class="sottotitolo">Alloggi</h3>'
       r += '<div class="row">';
@@ -40,9 +40,9 @@ $(document).ready(function () {
        r +="</div>";
 
       });
-      r += '</div>';
+      r += '</div><br><br>';
 
-      r += '</div>';
+      r += '';
       return r;
    }
 });

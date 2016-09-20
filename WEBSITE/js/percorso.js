@@ -10,7 +10,7 @@ function getParameterByName(name, url) {
 $(document).ready(function () {
 
    id = getParameterByName('id');
-   url = "/php/idfrom.php?id=" + id + "&from=PERCORSO";
+   url = "http://parcomajella.altervista.org/php/idfrom.php?id=" + id + "&from=PERCORSO";
 
    $.ajax({
       type: 'GET',
@@ -53,12 +53,13 @@ function tab1(d) {
    r += '<div class="row style=" width:95%;"">';
    r += '<p><b>Sigla sentiero: </b>' + d['SIGLA'] + '</p>';
    r += '<p><b>Località di inizio: </b>' + d['INIZIO'] + '</p>';
-   r += '<p><b>Località di inizio: </b>' + d['INIZIO'] + '</p>';
    r += '<p><b>Località di arrivo: </b>' + d['FINE'] + '</p>';
    r += '<p> <b>Difficoltà: </b>' + d['diff'] + '</p>';
    r += '<p><b>Dislivello: </b>' + d['DISLIVELLO'] + '</p>';
    r += '<p><b>Lunghezza: </b>' + d['LUNGHEZZA'] + '</p>';
    r += '<p><b>Tempo di percorrenza: </b>' + d['DURATA'] + '</p>';
+   
+   r += '<h3 class="sottotitolo">Cosa puoi trovare su questo percorso:</h3>';
    r += '<div id="percorsopianta"></div>';
    r += '<div id="percorsoanimale"></div>';
    r += '<div id="percorsoluogo"></div>';

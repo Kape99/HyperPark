@@ -2,7 +2,7 @@ $( document ).ready(function() {
     $.ajax({
         type:'GET',
         dataType: 'json',
-        url: "/php/flora.php",
+        url: "http://parcomajella.altervista.org/php/flora.php",
         crossDomain: true,
     }).success(function(result){
         var prod = flora(result);

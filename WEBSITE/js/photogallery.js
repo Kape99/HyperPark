@@ -1,5 +1,5 @@
 $(document).ready(function () {
-   url = "/php/allphoto.php" ;
+   url = "http://parcomajella.altervista.org/php/allphoto.php" ;
 
    $.ajax({
       type: 'GET',

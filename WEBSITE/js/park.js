@@ -45,9 +45,10 @@ function createBreadcrumb(infos, type) {
    case "diff":
       str = "<li><a href='percorsi.html'>Percorsi</a></li><li>" + infos[1]["diff"] + "</li>";
       break;
- case "percorso":
+
+   case "percorso":
       str = '<li><a href="percorsi.html">Percorsi</a></li>' +
-         '<li><a href="difficolta.html?diff='+ infos["DIFFICOLTA"] + '">Percorsi '+ infos["diff"] + "</a></li><li>" + infos["NOME"] + "</li>";
+         '<li><a href="difficolta.html?diff=' + infos["DIFFICOLTA"] + '">Percorsi ' + infos["diff"] + "</a></li><li>" + infos["NOME"] + "</li>";
       break;
    case "hh":
       str = "<li>Ospitalità</li>";

@@ -11,7 +11,7 @@ function getParameterByName(name, url) {
 $(document).ready(function () {
    equalHeight($(".stessaaltezza"));
    id = getParameterByName('id');
-   url = "/php/photo.php?id=" + id + "&tipo=HH";
+   url = "http://parcomajella.altervista.org/php/photo.php?id=" + id + "&tipo=HH";
 
    $.ajax({
       type: 'GET',

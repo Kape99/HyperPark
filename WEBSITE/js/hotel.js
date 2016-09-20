@@ -11,7 +11,7 @@ function getParameterByName(name, url) {
 $(document).ready(function () {
    fakewaffle.responsiveTabs(['xs', 'sm']);
    id = getParameterByName('id');
-   url = "/php/idfrom.php?id=" + id+"&from=HH";
+   url = "http://parcomajella.altervista.org/php/idfrom.php?id=" + id+"&from=HH";
 
    $.ajax({
       type: 'GET',
