@@ -56,6 +56,8 @@ $( document ).ready(function() {
         r +="</div>";
         r +="</div>";
         r +="</div>";
+        r +="<div class='jumbotron jumbotron-fluid'>";
+
         var count=0;
         arg.forEach(function (d) {
             if (count == 0) {
@@ -73,6 +75,7 @@ $( document ).ready(function() {
             r+='</div>';
         }
        });
+       r +="</div>";
 
 
         return r;

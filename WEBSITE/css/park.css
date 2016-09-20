@@ -4,14 +4,14 @@ body {
    font-family: 'Open Sans', sans-serif; font-size: 14px; font-weight: 300; color: #555; margin: 0; padding: 0;padding-top: 20px; /*Required padding for .navbar-fixed-top. Change if height of navigation changes. */
 }
 
-.cliccabile {
+.cliccabile{
+  color: white;
+}
+
+.cliccabile:hover {
     text-decoration: underline;
 }
 
-.right-minibuffer { margin-right:5px; }
-
-.top-buffer { margin-top:20px; }
-.bottom-buffer { margin-bottom:20px; }
 
 .navbar {
     margin-bottom: 0px;
@@ -41,18 +41,22 @@ h2grigrio {
 	color:#FFF;
 }
 
-.nopaddingbottom {
-	padding-bottom:3px;
-}
-
 .arancione{
-    background-color: #e69138;
+    background-color: #ff6d00;
     color: #FFF;
 }
 
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
   #logos { display: none; }  /* show it on small screens */
+
+  .bianco-md{
+    color: white;
+  }
+
+  .bianco-md:hover{
+    text-decoration: underline;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 2048px) {
@@ -100,11 +104,12 @@ h2grigrio {
    color: rgb(230,145,56);
   text-align: center;
 }
-
+/*
 .thumbnail {
    background-color: rgb(238,238,238);
    padding-bottom: 25px;
 }
+*/
 
 .imganimale {
    height: 200px;
