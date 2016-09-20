@@ -8,7 +8,7 @@ function getParameterByName(name, url) {
    return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 $(document).ready(function () {
-   
+
    id = getParameterByName('id');
    url = "/php/idfrom.php?id=" + id + "&from=PERCORSO";
 
@@ -26,7 +26,7 @@ $(document).ready(function () {
       $("#tab1tofill").html(tofill1);
       $("#tab2tofill").html(tofill2);
       createBreadcrumb(result,'percorso');
-      
+
    });
 
 
@@ -59,6 +59,9 @@ function tab1(d) {
    r += '<p><b>Dislivello: </b>' + d['DISLIVELLO'] + '</p>';
    r += '<p><b>Lunghezza: </b>' + d['LUNGHEZZA'] + '</p>';
    r += '<p><b>Tempo di percorrenza: </b>' + d['DURATA'] + '</p>';
+   r += '<div id="percorsopianta"></div>';
+   r += '<div id="percorsoanimale"></div>';
+   r += '<div id="percorsoluogo"></div>';
    r += '</div>';
    r += '</div>';
    return r;

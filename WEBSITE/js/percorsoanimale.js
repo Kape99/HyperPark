@@ -7,12 +7,12 @@ function getParameterByName(name, url) {
    if (!results[2]) return '';
    return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
-s
+
 
 $(document).ready(function () {
-   equalHeight($(".stessaaltezza"));
+
    id = getParameterByName('id');
-   url = "/php/percorsoaltro.php?percorso="+ percorso + "&tipo=HH";
+   url = "/php/percorsoanimale.php?id="+id;
 
    $.ajax({
       type: 'GET',
@@ -20,23 +20,19 @@ $(document).ready(function () {
       url: url,
       crossDomain: true,
    }).success(function (result) {
-      var tofill3 = tab(result);
-      $("#tab3tofill2").html(tofill3);
+      var tofill = tab(result);
+      $("#percorsoanimale").html(tofill);
    });
 
-  
+
 
    function tab(arg) {
       var r = '';
-      r += '<div class="row">';
-      
+      r += '<p><b>Fauna: </b>';
       arg.forEach(function (d) {
-         r += '<a href="/">Visit our HTML tutorial</a>' + d['URL'] + '" alt="">';
-         r += '</a>';
-         r += '</div>';
+       r += '<a href="animale.html?id='+d['ID']+'">'+d['NOME']+' </a>';
       });
-
-      r += '</div>';
+      r += '</p>';
       return r;
    }
 });
